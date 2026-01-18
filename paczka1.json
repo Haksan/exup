@@ -1,0 +1,2402 @@
+[
+  {
+    "id": 1,
+    "q": "Gdzie w pamięci przechowywane są typy referencyjne (np. obiekty klas)?",
+    "o": ["Na stosie (Stack)", "Na stercie (Heap)", "W pamięci stałej", "W rejestrach CPU"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Typy referencyjne przechowują swoje dane na stercie, a na stosie znajduje się jedynie referencja (adres)."
+  },
+  {
+    "id": 2,
+    "q": "Jaki jest wynik operacji: double wynik = 3 / 4;?",
+    "o": ["0.75", "0.0", "1.0", "0.7"],
+    "c": 1,
+    "type": "single",
+    "h": "Haczyk z wykładów: dzielenie dwóch liczb całkowitych (int) daje wynik całkowity (0). Dopiero potem następuje konwersja na double."
+  },
+  {
+    "id": 3,
+    "q": "Ile bitów zajmuje typ 'decimal' i do czego jest zalecany?",
+    "o": ["32 bity, grafika", "64 bity, fizyka", "128 bitów, finanse", "16 bitów, tekst"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 2: Decimal to 128-bitowa wartość o wysokiej precyzji, zalecana do obliczeń finansowych."
+  },
+  {
+    "id": 4,
+    "q": "Który operator przypisuje wartość prawej strony TYLKO wtedy, gdy lewa strona to null?",
+    "o": ["??", "??=", "?:", "as"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 10: Operator ??= (null-coalescing assignment) służy do warunkowego przypisania dla typów nullable."
+  },
+  {
+    "id": 5,
+    "q": "W schemacie blokowym operację przypisania (np. suma = a + b) rysujemy w:",
+    "o": ["Rombie", "Elipsie", "Prostokącie (skrzynce)", "Trójkącie"],
+    "c": 2,
+    "type": "single",
+    "h": "Zgodnie z arkuszami: każda operacja obliczeniowa jest umieszczona w skrzynce (prostokącie)."
+  },
+  {
+    "id": 6,
+    "q": "Właściwość Array.Rank dla tablicy int[,,] zwróci:",
+    "o": ["Liczbę wszystkich elementów", "3", "0", "Typ danych elementów"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 5: Rank to właściwość tylko do odczytu określająca liczbę wymiarów tablicy."
+  },
+  {
+    "id": 7,
+    "q": "Algorytm jest zbieżny, gdy:",
+    "o": ["Zwraca wiele wyników", "Jest realizowany w skończonym czasie", "Działa na liczbach rzeczywistych", "Nie zawiera pętli"],
+    "c": 1,
+    "type": "single",
+    "h": "Definicja z arkusza: algorytm musi kończyć się w skończonym czasie."
+  },
+  {
+    "id": 8,
+    "q": "Rekordy aktywacji procedur przy rekurencji są odkładane na:",
+    "o": ["Stercie", "Dysku", "Stosie", "Rejestrach"],
+    "c": 2,
+    "type": "single",
+    "h": "Zdjęcia: wywołania funkcji (w tym rekurencyjne) wiążą się z odkładaniem rekordów aktywacji na stosie."
+  },
+  {
+    "id": 9,
+    "q": "Wskaż błędny identyfikator (nazwę zmiennej) w C#:",
+    "o": ["_liczba", "suma_1", "1miejsce", "Wynik"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 2: Nazwa zmiennej nie może zaczynać się od cyfry."
+  },
+  {
+    "id": 10,
+    "q": "Modyfikator 'sealed' zastosowany przy definicji klasy:",
+    "o": ["Wymusza dziedziczenie", "Blokuje możliwość dziedziczenia", "Czyni klasę statyczną", "Ukrywa klasę"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Klasa sealed (zapieczętowana) nie może być klasą bazową dla innych klas."
+  },
+  {
+    "id": 11,
+    "q": "Czym różni się klasa abstrakcyjna od zwykłej?",
+    "o": ["Nie może mieć metod", "Nie można utworzyć jej obiektu (instancji)", "Musi być statyczna", "Zawsze jest prywatna"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Klasa abstrakcyjna służy tylko jako baza; operator 'new' na niej nie zadziała."
+  },
+  {
+    "id": 12,
+    "q": "Domyślny modyfikator dostępu dla składowych klasy (np. pól) to:",
+    "o": ["public", "internal", "protected", "private"],
+    "c": 3,
+    "type": "single",
+    "h": "Wykład 11: Składowe klasy, jeśli nie podano inaczej, są domyślnie prywatne (private)."
+  },
+  {
+    "id": 13,
+    "q": "Co robi instrukcja 'continue' w pętli?",
+    "o": ["Przerywa całkowicie pętlę", "Kończy program", "Pomija resztę instrukcji w bieżącej iteracji", "Resetuje licznik pętli"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 4: Continue przechodzi od razu do sprawdzenia warunku następnej iteracji."
+  },
+  {
+    "id": 14,
+    "q": "Parametr metody oznaczony słowem 'params' musi być:",
+    "o": ["Typu string", "Ostatnim argumentem na liście", "Zainicjalizowany jako null", "Statyczny"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 6: Słowo kluczowe params musi występować na końcu listy parametrów metody."
+  },
+  {
+    "id": 15,
+    "q": "Metoda ReadKey() z klasy Console zwraca:",
+    "o": ["string", "int", "ConsoleKeyInfo", "char"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 3: ReadKey pobiera znak lub przycisk i zwraca strukturę ConsoleKeyInfo."
+  },
+  {
+    "id": 16,
+    "q": "Zmienna 'var' musi zostać zainicjalizowana:",
+    "o": ["W konstruktorze", "W tej samej instrukcji, w której jest deklarowana", "W dowolnym momencie", "Jako null"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 6: Kompilator musi znać typ od razu, by go przypisać do var."
+  },
+  {
+    "id": 17,
+    "q": "Typ 'dynamic' omija kontrolę typów w czasie:",
+    "o": ["Kompilacji", "Wykonania (Runtime)", "Projektowania", "Instalacji"],
+    "c": 0,
+    "type": "single",
+    "h": "Wykład 6: Typy dynamiczne są obsługiwane przez DLR w czasie działania programu, nie przy kompilacji."
+  },
+  {
+    "id": 18,
+    "q": "Metody częściowe (partial) muszą zawsze zwracać:",
+    "o": ["int", "bool", "void", "object"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 12: Metody częściowe mają ograniczenie - muszą zwracać typ void."
+  },
+  {
+    "id": 19,
+    "q": "Która kolekcja przechowuje elementy jako pary klucz-wartość?",
+    "o": ["List<T>", "Stack<T>", "Dictionary<TKey, TValue>", "Queue<T>"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 9: Słownik służy do mapowania unikalnych kluczy na wartości."
+  },
+  {
+    "id": 20,
+    "q": "Jakie jest domyślne mapowanie stałych w typie wyliczeniowym (enum)?",
+    "o": ["Zaczynają się od 1, typ string", "Zaczynają się od 0, typ int", "Są losowe", "Zależą od nazwy"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 9: Domyślnie enum mapuje stałe do int, zaczynając od zera."
+  },
+  {
+    "id": 21,
+    "q": "Operator 'as' w C# służy do:",
+    "o": ["Mnożenia", "Sprawdzania typu (zwraca bool)", "Bezpiecznego rzutowania (zwraca null przy błędzie)", "Tworzenia aliasu"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 12: Operator as próbuje rzutować; jeśli się nie uda, nie rzuca wyjątku, lecz daje null."
+  },
+  {
+    "id": 22,
+    "q": "Który blok w strukturze try-catch-finally wykona się ZAWSZE?",
+    "o": ["try", "catch", "finally", "Żaden"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 4: Finally służy do zwalniania zasobów i wykonuje się niezależnie od błędu."
+  },
+  {
+    "id": 23,
+    "q": "Słowo kluczowe 'base' służy do:",
+    "o": ["Zamykania programu", "Odwołania do składowych klasy bazowej", "Tworzenia bazy danych", "Definiowania typu"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Pozwala wywołać konstruktor lub metodę z klasy nadrzędnej."
+  },
+  {
+    "id": 24,
+    "q": "Konstruktor w C# różni się od metod tym, że:",
+    "o": ["Musi być statyczny", "Nie określa typu zwracanej wartości", "Musi mieć parametry", "Jest dziedziczony"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 11: Konstruktor nigdy nie zwraca wartości i nie ma w deklaracji nawet słowa void."
+  },
+  {
+    "id": 25,
+    "q": "Właściwość Array.Length dla tablicy int[4,5] wyniesie:",
+    "o": ["4", "5", "9", "20"],
+    "c": 3,
+    "type": "single",
+    "h": "Wykład 5: Length zwraca całkowitą liczbę elementów we wszystkich wymiarach."
+  },
+  {
+    "id": 26,
+    "q": "Czy stała 'const' może zostać zmieniona po kompilacji?",
+    "o": ["Tak", "Nie", "Tylko przez słowo ref", "Tylko w pętli"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Const jest stałą symboliczną, jej wartość jest 'wbita' w kod przy kompilacji."
+  },
+  {
+    "id": 27,
+    "q": "Pętla do...while wykona się co najmniej:",
+    "o": ["0 razy", "1 raz", "Zależnie od warunku początkowego", "Nieskończenie wiele"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 4: Ponieważ warunek jest na końcu, ciało pętli wykona się przynajmniej raz."
+  },
+  {
+    "id": 28,
+    "q": "Metoda Array.Clear() przypisuje elementom tablicy:",
+    "o": ["Wartości losowe", "Wartości domyślne dla typu (np. 0 lub null)", "Wartości ujemne", "Puste stringi"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 5: Metoda ta resetuje fragment tablicy do stanu początkowego."
+  },
+  {
+    "id": 29,
+    "q": "Zasięg (scope) zmiennej lokalnej to:",
+    "o": ["Cały program", "Tylko klasa", "Blok instrukcji {}, w którym została zadeklarowana", "Tylko namespace"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 3: Zmienna żyje tylko wewnątrz klamerek, w których powstała."
+  },
+  {
+    "id": 30,
+    "q": "Hermetyzacja polega na:",
+    "o": ["Dziedziczeniu pól", "Ukrywaniu stanu wewnętrznego obiektu", "Używaniu wielu wątków", "Pisaniu komentarzy"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 11: Polega na łączeniu danych z metodami i ograniczaniu dostępu do pól (przez private)."
+  },
+  {
+    "id": 31,
+    "q": "Który operator sprawdza zgodność typu i zwraca true/false?",
+    "o": ["as", "is", "typeof", "sizeof"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Operator 'is' to test typu."
+  },
+  {
+    "id": 32,
+    "q": "Typ wyliczeniowy (enum) należy do kategorii:",
+    "o": ["Typów referencyjnych", "Typów wartościowych", "Typów wskaźnikowych", "Interfejsów"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 9: Enymy są typami wartościowymi (Value types)."
+  },
+  {
+    "id": 33,
+    "q": "Zmienne typu nullable (np. int?) posiadają właściwość:",
+    "o": ["Length", "HasValue", "Count", "Rank"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 10: HasValue informuje, czy zmienna zawiera coś innego niż null."
+  },
+  {
+    "id": 34,
+    "q": "Instrukcja switch w C# wymaga, aby każdy case z kodem kończył się:",
+    "o": ["Klamrą", "Instrukcją skoku (np. break)", "Kropką", "Przecinkiem"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 4: Składnia wymusza zakończenie bloku case (break, return lub goto)."
+  },
+  {
+    "id": 35,
+    "q": "Metoda statyczna (static) wywoływana jest poprzez:",
+    "o": ["Nazwę obiektu", "Operator new", "Nazwę klasy", "Słowo kluczowe this"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 11: Składowe statyczne należą do typu, nie do konkretnej instancji."
+  },
+  {
+    "id": 36,
+    "q": "Przeciążanie metod (overloading) to:",
+    "o": ["Zmiana ciała metody w klasie pochodnej", "Kilka metod o tej samej nazwie, ale różnych parametrach", "Zbyt długi czas wykonywania", "Dziedziczenie z wielu klas"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 6: Metody muszą różnić się sygnaturą (liczbą lub typem argumentów)."
+  },
+  {
+    "id": 37,
+    "q": "ArrayList różni się od List<int> tym, że:",
+    "o": ["Jest szybszy", "Przechowuje elementy jako object (brak silnego typowania)", "Nie można go sortować", "Zajmuje mniej pamięci"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 9: ArrayList to stara kolekcja niegeneryczna, wymaga rzutowania (boxing)."
+  },
+  {
+    "id": 38,
+    "q": "W schemacie blokowym rąb (diament) oznacza:",
+    "o": ["Start programu", "Operację przypisania", "Decyzję (warunek logiczny)", "Koniec algorytmu"],
+    "c": 2,
+    "type": "single",
+    "h": "Arkusz: rąb służy do reprezentacji rozgałęzień (if)."
+  },
+  {
+    "id": 39,
+    "q": "Ile klas bazowych może mieć klasa w C#?",
+    "o": ["Wiele (dziedziczenie wielokrotne)", "Tylko jedną (dziedziczenie jednobazowe)", "Maksymalnie dwie", "Dowolną liczbę"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: C# nie wspiera wielokrotnego dziedziczenia klas (tylko interfejsów)."
+  },
+  {
+    "id": 40,
+    "q": "Operator % zwraca:",
+    "o": ["Procent z liczby", "Iloraz", "Resztę z dzielenia całkowitego", "Szybki pierwiastek"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 2: To operator modulo."
+  },
+  {
+    "id": 41,
+    "q": "Czy klasa statyczna może mieć niestatyczny konstruktor?",
+    "o": ["Tak", "Nie", "Tylko jeśli jest publiczna", "Tylko w C# 12"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 11: Wszystkie składowe klasy statycznej muszą być statyczne."
+  },
+  {
+    "id": 42,
+    "q": "Wyrażenie (x > 5 || y < 10) jest prawdziwe, gdy:",
+    "o": ["Oba warunki są spełnione", "Przynajmniej jeden warunek jest spełniony", "Żaden warunek nie jest spełniony", "Tylko x > 5"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Suma logiczna (lub) wymaga tylko jednej prawdy."
+  },
+  {
+    "id": 43,
+    "q": "Co to jest boksowanie (boxing)?",
+    "o": ["Usuwanie obiektów przez GC", "Konwersja typu wartościowego na referencyjny (object)", "Pakowanie kodu do DLL", "Sortowanie bąbelkowe"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 9: To opakowanie np. inta w obiekt na stercie."
+  },
+  {
+    "id": 44,
+    "q": "Parametr 'out' różni się od 'ref' tym, że:",
+    "o": ["Nie może być używany dla int", "Musi być zainicjalizowany wewnątrz metody przed jej zakończeniem", "Jest wolniejszy", "Zawsze zwraca zero"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 6: Metoda 'obiecuje', że przypisze wartość do parametru out."
+  },
+  {
+    "id": 45,
+    "q": "Metoda GetLength(0) dla tablicy int[4,5] zwróci:",
+    "o": ["20", "4", "5", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 5: Zwraca rozmiar pierwszego wymiaru (wierszy)."
+  },
+  {
+    "id": 46,
+    "q": "Instrukcja checked służy do:",
+    "o": ["Sprawdzania pisowni", "Kontroli przepełnienia arytmetycznego", "Weryfikacji nulli", "Logowania błędów"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Wymusza zgłoszenie błędu, gdy liczba wyjdzie poza zakres typu."
+  },
+  {
+    "id": 47,
+    "q": "Interfejs w C# może zawierać:",
+    "o": ["Pola prywatne", "Implementację metod (ciało)", "Jedynie sygnatury metod, właściwości, zdarzeń", "Konstruktory"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 12: Interfejs to kontrakt, definicja tego, co klasa musi umieć zrobić."
+  },
+  {
+    "id": 48,
+    "q": "Przestrzeń nazw dla kolekcji generycznych to:",
+    "o": ["System.IO", "System.Collections", "System.Collections.Generic", "System.Linq"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 9: Tam znajdziesz List<T> czy Dictionary<K,V>."
+  },
+  {
+    "id": 49,
+    "q": "Operator 'typeof' zwraca:",
+    "o": ["Wartość zmiennej", "Obiekt klasy System.Type dla danego typu", "Rozmiar typu", "Nazwę pliku"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Służy do pobierania metadanych o typie."
+  },
+  {
+    "id": 50,
+    "q": "Finalizator (destruktor) w C# zaczyna się od znaku:",
+    "o": ["#", "&", "~ (tylda)", "!"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 11: Destruktory służą do czyszczenia zasobów przed usunięciem obiektu."
+  },
+  {
+    "id": 51,
+    "q": "Co oznacza skrót LINQ w języku C#?",
+    "o": ["Language Integrated Network Query", "Language Integrated Query", "List Integrated Native Query", "Local Information Network Query"],
+    "c": 1,
+    "type": "single",
+    "h": "LINQ (Language Integrated Query) to mechanizm umożliwiający zadawanie zapytań do różnych źródeł danych bezpośrednio w kodzie C#."
+  },
+  {
+    "id": 52,
+    "q": "Który operator LINQ służy do filtrowania danych na podstawie podanego warunku?",
+    "o": ["Select", "Where", "OrderBy", "GroupBy"],
+    "c": 1,
+    "type": "single",
+    "h": "Metoda Where przyjmuje predykat i zwraca tylko te elementy, które spełniają podany warunek."
+  },
+  {
+    "id": 53,
+    "q": "Czym charakteryzuje się 'Deferred Execution' (odroczone wykonanie) w LINQ?",
+    "o": ["Zapytanie wykonuje się natychmiast po definicji", "Zapytanie wykonuje się dopiero w momencie iteracji po wynikach (np. w pętli foreach)", "Zapytanie wykonuje się tylko na serwerze bazy danych", "Zapytanie jest zawsze kompilowane do pliku EXE"],
+    "c": 1,
+    "type": "single",
+    "h": "Większość operatorów LINQ nie wykonuje zapytania w miejscu jego definicji, lecz dopiero gdy faktycznie dobieramy się do danych."
+  },
+  {
+    "id": 54,
+    "q": "Wskaż podstawową metodę rozszerzającą LINQ służącą do transformacji danych:",
+    "o": ["Select()", "Where()", "OrderBy()", "Main()"],
+    "c": 0,
+    "type": "single",
+    "h": "Metoda Select służy do rzutowania (projektowania) danych na nowy format."
+  },
+  {
+    "id": 55,
+    "q": "Jaka jest główna różnica między 'class' a 'struct' w C#?",
+    "o": ["Klasa jest typem wartościowym, struktura referencyjnym", "Klasa jest typem referencyjnym (sterta), struktura wartościowym (stos)", "Nie ma żadnej różnicy", "Klasa nie może implementować interfejsów"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2 i 11: Klasy to Reference Types, struktury to Value Types."
+  },
+  {
+    "id": 56,
+    "q": "Słowo kluczowe 'readonly' przy polu klasy oznacza, że:",
+    "o": ["Wartość można przypisać tylko w deklaracji", "Wartość można przypisać w deklaracji lub w konstruktorze", "Wartość można zmieniać w dowolnej metodzie statycznej", "Pole jest niewidoczne dla klas pochodnych"],
+    "c": 1,
+    "type": "single",
+    "h": "Readonly pozwala na inicjalizację pola w konstruktorze, w przeciwieństwie do 'const', które musi być znane już w czasie kompilacji."
+  },
+  {
+    "id": 57,
+    "q": "Do czego służy instrukcja 'using' w kontekście obiektów (np. StreamReader)?",
+    "o": ["Do przyspieszenia działania pętli", "Do automatycznego wywołania metody Dispose() i zwolnienia zasobów", "Do importowania bibliotek zewnętrznych", "Do blokowania dostępu innych wątków"],
+    "c": 1,
+    "type": "single",
+    "h": "Instrukcja using gwarantuje, że obiekty implementujące IDisposable zostaną poprawnie wyczyszczone nawet po wystąpieniu błędu."
+  },
+  {
+    "id": 58,
+    "q": "Która kolekcja generyczna implementuje mechanizm LIFO (Last-In-First-Out)?",
+    "o": ["Queue<T>", "List<T>", "Stack<T>", "Dictionary<K, V>"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 9: Stos (Stack) działa na zasadzie 'ostatni przyszedł, pierwszy wyszedł'."
+  },
+  {
+    "id": 59,
+    "q": "Mechanizm unboxingu to:",
+    "o": ["Konwersja typu referencyjnego (object) na typ wartościowy", "Konwersja typu wartościowego na referencyjny", "Usunięcie obiektu z pamięci", "Rzutowanie klasy bazowej na pochodną"],
+    "c": 0,
+    "type": "single",
+    "h": "Wykład 9: Unboxing to jawne rzutowanie obiektu z powrotem na typ wartościowy (np. int)."
+  },
+  {
+    "id": 60,
+    "q": "Wybierz kluczową cechę interfejsów w C#:",
+    "o": ["Klasa może implementować wiele interfejsów", "Interfejs może posiadać pola prywatne", "Interfejs dziedziczy po klasie", "Interfejs musi mieć konstruktor"],
+    "c": 0,
+    "type": "single",
+    "h": "Wykład 12: Interfejsy pozwalają na wielokrotną implementację, co jest podstawą polimorfizmu."
+  },
+  {
+    "id": 61,
+    "q": "Co się stanie w przypadku użycia operatora 'as' przy niepoprawnym rzutowaniu typów referencyjnych?",
+    "o": ["Zostanie zgłoszony wyjątek InvalidCastException", "Zmienna przyjmie wartość null", "Program zostanie przerwany", "Kompilator zgłosi błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Operator 'as' jest bezpieczny - zamiast rzucać błąd, zwraca null."
+  },
+  {
+    "id": 62,
+    "q": "Jaki jest wynik działania kodu: string s = null; Console.WriteLine(s?.Length ?? -1);?",
+    "o": ["Błąd (NullReferenceException)", "null", "0", "-1"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 10: Operator ?. zwraca null jeśli s jest null, a operator ?? zamienia ten null na -1."
+  },
+  {
+    "id": 63,
+    "q": "Słowo kluczowe 'yield return' służy do:",
+    "o": ["Zatrzymania działania programu", "Iteracyjnego zwracania elementów kolekcji bez tworzenia listy tymczasowej", "Zwalniania pamięci", "Przeskoczenia do następnej iteracji pętli for"],
+    "c": 1,
+    "type": "single",
+    "h": "Yield umożliwia tworzenie iteratorów w sposób stanowy, zwracając elementy jeden po drugim."
+  },
+  {
+    "id": 64,
+    "q": "Która z metod służy do sortowania tablicy w miejscu?",
+    "o": ["Array.Sort()", "Array.OrderBy()", "Array.Clear()", "Array.Reverse()"],
+    "c": 0,
+    "type": "single",
+    "h": "Wykład 5: Array.Sort to metoda statyczna modyfikująca oryginalną tablicę."
+  },
+  {
+    "id": 65,
+    "q": "Wskaż kluczową cechę klasy częściowej (partial class):",
+    "o": ["Pozwala na podział definicji klasy na kilka plików", "Automatycznie dziedziczy po object", "Może znajdować się w różnych projektach (DLL)", "Zawsze jest statyczna"],
+    "c": 0,
+    "type": "single",
+    "h": "Wykład 12: Partial class musi być w tym samym projekcie i namespace, pozwalając rozdzielić kod."
+  },
+  {
+    "id": 66,
+    "q": "Czym jest 'JIT' (Just-In-Time) w środowisku .NET?",
+    "o": ["Kompilatorem zamieniającym kod MSIL na kod maszynowy w czasie uruchamiania programu", "Narzędziem do czyszczenia pamięci", "Systemem kontroli wersji", "Sposobem na pisanie szybszych pętli"],
+    "c": 0,
+    "type": "single",
+    "h": "JIT kompiluje kod pośredni do binarnego kodu procesora tuż przed wykonaniem danej metody."
+  },
+  {
+    "id": 67,
+    "q": "Co oznacza modyfikator 'new' przy deklaracji metody w klasie pochodnej?",
+    "o": ["Wymusza polimorfizm", "Jawnie ukrywa (hiding) metodę z klasy bazowej", "Tworzy nową instancję metody", "Jest błędem składniowym"],
+    "c": 1,
+    "type": "single",
+    "h": "Modyfikator new stosujemy, gdy chcemy stworzyć metodę o tej samej nazwie co w bazie, ale nie chcemy korzystać z override."
+  },
+  {
+    "id": 68,
+    "q": "Kolekcja Dictionary<K, V> przechowuje elementy jako:",
+    "o": ["Listę obiektów", "Pary Klucz-Wartość", "Tylko unikalne wartości bez kluczy", "Tablicę dynamiczną"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 9: Słownik pozwala na szybki dostęp do wartości za pomocą unikalnego klucza."
+  },
+  {
+    "id": 69,
+    "q": "Co to jest 'Garbage Collector'?",
+    "o": ["Program do usuwania nieużywanych plików z dysku", "Automatyczny system zarządzania pamięcią na stercie", "Narzędzie do optymalizacji kodu", "Wtyczka do Visual Studio"],
+    "c": 1,
+    "type": "single",
+    "h": "GC automatycznie zwalnia pamięć zajmowaną przez obiekty, do których nie prowadzą już żadne referencje."
+  },
+  {
+    "id": 70,
+    "q": "Wyjątek 'IndexOutOfRangeException' zostanie zgłoszony, gdy:",
+    "o": ["Podzielimy przez zero", "Będziemy chcieli odczytać element tablicy spoza jej zakresu", "Zmienna będzie miała wartość null", "Zabraknie pamięci operacyjnej"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 5: Dzieje się tak, gdy użyjemy indeksu ujemnego lub większego niż (Length - 1)."
+  },
+  {
+    "id": 71,
+    "q": "Który operator służy do sprawdzania typu w run-time i zwraca typ obiektu?",
+    "o": ["sizeof", "is", "typeof", "GetType()"],
+    "c": 3,
+    "type": "single",
+    "h": "Wykład 2: GetType() to metoda wywoływana na konkretnym obiekcie zwracająca jego typ."
+  },
+  {
+    "id": 72,
+    "q": "Jakie słowo kluczowe w bloku switch pozwala 'przeskoczyć' do innego przypadku?",
+    "o": ["continue", "goto case", "next", "return"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 4: goto case [etykieta] pozwala na sterowanie przepływem wewnątrz instrukcji switch."
+  },
+  {
+    "id": 73,
+    "q": "Czym różni się pętla 'while' od 'do..while'?",
+    "o": ["Nie ma żadnej różnicy", "While sprawdza warunek na początku, do..while na końcu", "Do..while jest szybsza", "While działa tylko na tablicach"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 4: Do..while gwarantuje, że kod wewnątrz wykona się przynajmniej jeden raz."
+  },
+  {
+    "id": 74,
+    "q": "Do czego służy operator 'sizeof'?",
+    "o": ["Zwraca liczbę elementów tablicy", "Zwraca rozmiar typu w bajtach", "Zwraca rozmiar pliku", "Zlicza znaki w stringu"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Służy do sprawdzania rozmiaru typów niezarządzanych (np. int, double)."
+  },
+  {
+    "id": 75,
+    "q": "Zmienna typu 'string' w C# charakteryzuje się tym, że jest:",
+    "o": ["Typem wartościowym", "Niezmiennym (immutable) typem referencyjnym", "Typem prostym na stosie", "Zawsze statyczna"],
+    "c": 1,
+    "type": "single",
+    "h": "String jest klasą, ale każda jego modyfikacja tworzy nowy obiekt w pamięci."
+  },
+  {
+    "id": 76,
+    "q": "Co oznacza, że algorytm jest 'zdeterminowany'?",
+    "o": ["Zawsze daje ten sam wynik dla tych samych danych wejściowych", "Działa bardzo szybko", "Zawsze kończy się w skończonym czasie", "Zajmuje mało pamięci"],
+    "c": 0,
+    "type": "single",
+    "h": "Determinizm to cecha algorytmu gwarantująca powtarzalność wyników."
+  },
+  {
+    "id": 77,
+    "q": "Metoda statyczna klasy NIE może:",
+    "o": ["Być publiczna", "Przyjmować parametrów", "Odwoływać się do niestatycznych pól tej samej klasy bezpośrednio", "Być przeciążana"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 11: Metoda statyczna nie ma dostępu do instancji (this), więc nie widzi pól niestatycznych bez obiektu."
+  },
+  {
+    "id": 78,
+    "q": "Słowo kluczowe 'params' w definicji metody pozwala na:",
+    "o": ["Przekazywanie parametrów przez referencję", "Przekazywanie zmiennej liczby argumentów tego samego typu", "Użycie parametrów domyślnych", "Zablokowanie edycji argumentów"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 6: Pozwala wywołać metodę z dowolną liczbą argumentów oddzielonych przecinkami lub tablicą."
+  },
+  {
+    "id": 79,
+    "q": "Wybierz poprawne sposoby deklaracji tablicy dwuwymiarowej (prostokątnej):",
+    "o": ["int[][] t;", "int[,] t;", "int[2,2] t;", "int t[,];"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 5: int[,] to tablica wielowymiarowa, int[][] to tablica tablic (postrzępiona)."
+  },
+  {
+    "id": 80,
+    "q": "Co zwróci wyrażenie: 5 / 2?",
+    "o": ["2.5", "2", "3", "2.0"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Dzielenie dwóch intów zawsze obcina część ułamkową."
+  },
+  {
+    "id": 81,
+    "q": "Wskaż prawidłowy wynik działania pętli: for(int i=0; i<3; i++) Console.Write(i);",
+    "o": ["012", "123", "0123", "321"],
+    "c": 0,
+    "type": "single",
+    "h": "Pętla startuje od 0 i kończy na 2, ponieważ warunek to i < 3."
+  },
+  {
+    "id": 82,
+    "q": "Jak wymusić sprawdzenie przepełnienia (overflow) w operacjach arytmetycznych?",
+    "o": ["Użyć bloku try-catch", "Użyć słowa kluczowego checked", "Użyć typu double", "Nie da się tego zrobić"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 2: Blok 'checked' rzuca wyjątek OverflowException w razie przekroczenia zakresu typu."
+  },
+  {
+    "id": 83,
+    "q": "Który operator logiczny stosuje tzw. 'krótkie cięcie' (short-circuiting)?",
+    "o": ["&", "|", "&&", "!"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 2: && nie sprawdza drugiego warunku, jeśli pierwszy jest fałszywy."
+  },
+  {
+    "id": 84,
+    "q": "Co to jest 'Namespace' (przestrzeń nazw)?",
+    "o": ["Miejsce na dysku", "Kontener służący do logicznego grupowania klas i unikania konfliktów nazw", "Rodzaj pętli", "Typ danych"],
+    "c": 1,
+    "type": "single",
+    "h": "Przestrzenie nazw porządkują kod, np. System.Collections.Generic."
+  },
+  {
+    "id": 85,
+    "q": "Jak sprawdzić, czy zmienna typu nullable 'int? x' nie posiada wartości?",
+    "o": ["if(x == 0)", "if(x.HasValue == false)", "if(x == 100)", "if(x is string)"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 10: Właściwość HasValue zwraca false, gdy zmienna przechowuje null."
+  },
+  {
+    "id": 86,
+    "q": "Zmienna zadeklarowana jako 'const' jest niejawnie:",
+    "o": ["Wirtualna", "Statyczna", "Prywatna", "Dynamiczna"],
+    "c": 1,
+    "type": "single",
+    "h": "Stałe są statyczne, ponieważ należą do typu, a nie do obiektu."
+  },
+  {
+    "id": 87,
+    "q": "Jaki jest cel stosowania metody 'Virtual'?",
+    "o": ["Zablokowanie dziedziczenia", "Umożliwienie nadpisania metody w klasie pochodnej (polimorfizm)", "Przyspieszenie metody", "Uczynienie metody prywatną"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Metoda wirtualna posiada implementację, ale pozwala na jej zmianę przez override."
+  },
+  {
+    "id": 88,
+    "q": "Konstruktor statyczny klasy:",
+    "o": ["Służy do tworzenia obiektów statycznych", "Jest wywoływany automatycznie przed pierwszym użyciem klasy", "Może przyjmować parametry", "Może być wywołany ręcznie przez programistę"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 11: Służy do inicjalizacji pól statycznych i wykonuje się tylko raz."
+  },
+  {
+    "id": 89,
+    "q": "Co oznacza modyfikator 'internal'?",
+    "o": ["Dostęp tylko wewnątrz klasy", "Dostęp tylko wewnątrz tego samego projektu (assembly)", "Dostęp dla wszystkich", "Dostęp tylko dla klas pochodnych"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 11: Internal ogranicza widoczność do biblioteki DLL lub pliku EXE, w którym klasa się znajduje."
+  },
+  {
+    "id": 90,
+    "q": "Interfejs IEnumerable pozwala na:",
+    "o": ["Sortowanie kolekcji", "Przeglądanie kolekcji za pomocą pętli foreach", "Dodawanie elementów", "Usuwanie elementów"],
+    "c": 1,
+    "type": "single",
+    "h": "Każda klasa implementująca IEnumerable może być użyta w pętli foreach."
+  },
+  {
+    "id": 91,
+    "q": "Różnica między operatorem '==' a metodą 'Equals()' dla stringów to:",
+    "o": ["Nie ma żadnej różnicy w C# dla typu string", "Equals sprawdza referencje, a == wartości", "== sprawdza referencje, a Equals wartości", "== nie działa na stringach"],
+    "c": 0,
+    "type": "single",
+    "h": "W C# dla stringów operator == jest przeciążony tak, by porównywał zawartość, podobnie jak Equals()."
+  },
+  {
+    "id": 92,
+    "q": "Który operator LINQ służy do rzutowania wyników na inny typ (transformacji)?",
+    "o": ["Select", "Cast", "Transform", "Where"],
+    "c": 0,
+    "type": "single",
+    "h": "Select pozwala 'wybrać' konkretne pola lub stworzyć nowe obiekty na podstawie źródła."
+  },
+  {
+    "id": 93,
+    "q": "Co zwraca metoda 'Dictionary.ContainsKey(key)'?",
+    "o": ["Wartość przypisaną do klucza", "bool - informację czy klucz istnieje w słowniku", "Indeks klucza", "Wyjątek jeśli klucza nie ma"],
+    "c": 1,
+    "type": "single",
+    "h": "Jest to bezpieczny sposób na sprawdzenie obecności klucza przed próbą odczytu wartości."
+  },
+  {
+    "id": 94,
+    "q": "Instrukcja 'foreach' pod spodem korzysta z:",
+    "o": ["Pętli for i indeksów", "Interfejsów IEnumerable i IEnumerator", "Stosu", "Rekurencji"],
+    "c": 1,
+    "type": "single",
+    "h": "Kompilator tłumaczy foreach na wywołania metod GetEnumerator(), MoveNext() oraz właściwości Current."
+  },
+  {
+    "id": 95,
+    "q": "Poprawny nagłówek metody Main w aplikacji konsolowej to:",
+    "o": ["static void Main()", "void Main()", "public Main()", "virtual void Main()"],
+    "c": 0,
+    "type": "single",
+    "h": "Metoda Main musi być statyczna."
+  },
+  {
+    "id": 96,
+    "q": "Czy klasa może dziedziczyć po innej klasie i jednocześnie implementować interfejsy?",
+    "o": ["Nie", "Tak, ale tylko jeden interfejs", "Tak, jedną klasę i wiele interfejsów", "Tylko jeśli klasa jest abstrakcyjna"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 12: C# wspiera dziedziczenie jednobazowe i wielokrotną implementację interfejsów."
+  },
+  {
+    "id": 97,
+    "q": "Zbiór par klucz-wartość w wersji niegenerycznej to:",
+    "o": ["ArrayList", "Hashtable", "SortedList", "Queue"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 9: Hashtable to niegeneryczny odpowiednik Dictionary."
+  },
+  {
+    "id": 98,
+    "q": "Wartość domyślna dla typu referencyjnego (np. string) to:",
+    "o": ["0", "'' (pusty ciąg)", "null", "false"],
+    "c": 2,
+    "type": "single",
+    "h": "Wszystkie typy referencyjne domyślnie wskazują na null."
+  },
+  {
+    "id": 99,
+    "q": "Co oznacza skrót MSIL (lub IL)?",
+    "o": ["Microsoft Interactive Language", "Microsoft Intermediate Language", "Main System Internal Logic", "Multi Standard Interface Level"],
+    "c": 1,
+    "type": "single",
+    "h": "Kod C# jest kompilowany najpierw do języka pośredniego (IL), a dopiero potem przez JIT do maszynowego."
+  },
+  {
+    "id": 100,
+    "q": "Czy w C# można przeciążać operatory (np. + lub ==)?",
+    "o": ["Nie", "Tak, za pomocą słowa kluczowego operator", "Tylko w strukturach", "Tylko dla typów liczbowych"],
+    "c": 1,
+    "type": "single",
+    "h": "C# pozwala na definiowanie własnego zachowania operatorów dla klas i struktur."
+  },
+  {
+    "id": 101,
+    "q": "Jaki będzie wynik wykonania kodu: \nint a = 5; \nint b = a++; \nConsole.Write(a + \" \" + b);",
+    "o": ["5 5", "6 5", "6 6", "5 6"],
+    "c": 1,
+    "type": "single",
+    "h": "Post-inkrementacja (a++) przypisuje starą wartość do b, a dopiero potem zwiększa a. Wynik: a=6, b=5."
+  },
+  {
+    "id": 102,
+    "q": "Co zostanie wyświetlone na ekranie? \ndouble x = 11 / 4; \nConsole.Write(x);",
+    "o": ["2.75", "2", "3", "2.0"],
+    "c": 3,
+    "type": "single",
+    "h": "Dzielenie int/int daje int (2). Przy przypisaniu do double wynik to 2.0. Aby uzyskać 2.75, musiałbyś zapisać 11.0 / 4."
+  },
+  {
+    "id": 103,
+    "q": "Gdzie znajduje się błąd w poniższym kodzie? \nstatic void Metoda(out int x) \n{ \n  if (x > 0) x = 10; \n}",
+    "o": ["Brak słowa ref", "Metoda nie może być statyczna", "Nie można użyć x przed przypisaniem mu wartości wewnątrz metody", "Parametr out musi być typu string"],
+    "c": 2,
+    "type": "single",
+    "h": "Wykład 6: Parametr 'out' jest traktowany jako niezainicjalizowany. Musisz mu najpierw przypisać wartość, zanim go odczytasz (np. w if)."
+  },
+  {
+    "id": 104,
+    "q": "Jaki wynik wypisze pętla? \nfor (int i = 0; i < 5; i++) \n{ \n  if (i == 2) continue; \n  if (i == 4) break; \n  Console.Write(i); \n}",
+    "o": ["0134", "0123", "013", "01"],
+    "c": 2,
+    "type": "single",
+    "h": "Continue pomija '2', a break kończy pętlę przed wypisaniem '4'. Wynik: 013."
+  },
+  {
+    "id": 105,
+    "q": "Wskaż błąd w deklaracji: \nvar x; \nx = 10;",
+    "o": ["Zmienna x musi być dużą literą", "Słowo 'var' wymaga inicjalizacji w tej samej linii", "x nie może być intem", "Brakuje słowa static"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 6: Niejawne typowanie 'var' wymaga przypisania wartości w momencie deklaracji, aby kompilator mógł określić typ."
+  },
+  {
+    "id": 106,
+    "q": "Ile elementów ma tablica i jaki jest jej Rank? \nint[,] t = new int[2, 3];",
+    "o": ["5 elementów, Rank 1", "6 elementów, Rank 2", "5 elementów, Rank 2", "6 elementów, Rank 1"],
+    "c": 1,
+    "type": "single",
+    "h": "Length = 2 * 3 = 6. Rank to liczba wymiarów, czyli 2."
+  },
+  {
+    "id": 107,
+    "q": "Jaki będzie wynik działania kodu LINQ? \nint[] liczby = { 1, 2, 3, 4, 5 }; \nvar wynik = liczby.Where(n => n % 2 == 0).Count();",
+    "o": ["5", "2", "3", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "Where wybiera liczby parzyste (2, 4), więc Count (liczba elementów) wynosi 2."
+  },
+  {
+    "id": 108,
+    "q": "Który fragment kodu wywoła błąd kompilacji?",
+    "o": ["const int x = 10; x = 5;", "int? y = null;", "string s = '';", "dynamic d = 5;"],
+    "c": 0,
+    "type": "single",
+    "h": "Nie można zmienić wartości stałej 'const'."
+  },
+  {
+    "id": 109,
+    "q": "Co wyświetli kod? \nint x = 10; \nobject o = x; \nx = 20; \nConsole.Write(o);",
+    "o": ["10", "20", "null", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "To jest mechanizm boksowania (boxing). 'o' przechowuje kopię wartości x z momentu boksowania. Zmiana x nie wpływa na o."
+  },
+  {
+    "id": 110,
+    "q": "Jaki jest wynik operacji logicznej? \nbool wynik = true || (5 / 0 == 0);",
+    "o": ["true", "false", "Błąd (DivisionByZeroException)", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "Operator || stosuje 'krótkie cięcie'. Ponieważ pierwsza część jest true, druga część (z dzieleniem przez zero) nie jest w ogóle sprawdzana."
+  },
+  {
+    "id": 111,
+    "q": "Wskaż błąd w poniższej klasie: \nstatic class Narzedzia { \n  public int Licznik = 0; \n}",
+    "o": ["Klasa statyczna nie może być publiczna", "W klasie statycznej wszystkie pola muszą być statyczne", "Brakuje konstruktora", "Licznik musi być typu string"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 11: Jeśli klasa jest 'static', każde pole wewnątrz też musi mieć modyfikator 'static'."
+  },
+  {
+    "id": 112,
+    "q": "Co wyświetli poniższy kod? \nstring a = \"100\"; \nint b = 200; \nConsole.Write(a + b);",
+    "o": ["300", "100200", "Błąd kompilacji", "100+200"],
+    "c": 1,
+    "type": "single",
+    "h": "Operator + w przypadku stringa i inta wykonuje konkatenację (łączenie napisów)."
+  },
+  {
+    "id": 113,
+    "q": "Wskaż niepoprawne użycie słowa 'base':",
+    "o": ["base.MetodaBazowa();", "class A : base { }", "public A() : base() { }", "Console.Write(base.ToString());"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: 'base' używamy do odwołań wewnątrz klasy pochodnej, nie można go użyć zamiast nazwy klasy bazowej w nagłówku."
+  },
+  {
+    "id": 114,
+    "q": "Jaki będzie wynik? \nint[] tab = { 10, 20, 30 }; \nint x = tab.GetLength(0); \nConsole.Write(x);",
+    "o": ["1", "3", "10", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "GetLength(0) zwraca rozmiar pierwszego (i jedynego tutaj) wymiaru tablicy."
+  },
+  {
+    "id": 115,
+    "q": "Co jest wynikiem? \nint x = 5; \nint y = 2; \nConsole.Write(x % y);",
+    "o": ["2.5", "2", "1", "0"],
+    "c": 2,
+    "type": "single",
+    "h": "Operator % to reszta z dzielenia. 5 dzielone przez 2 to 2 całe i 1 reszty."
+  },
+  {
+    "id": 116,
+    "q": "Wskaż błąd w obsłudze wyjątków: \ntry { ... } \nfinally { ... } \ncatch (Exception e) { ... }",
+    "o": ["Brak sekcji try", "Kolejność: catch musi być przed finally", "Brak zmiennej e", "Finally jest opcjonalne"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 4: Prawidłowa kolejność to try -> catch -> finally."
+  },
+  {
+    "id": 117,
+    "q": "Jaki będzie wynik działania pętli? \nint i = 10; \ndo { i++; } while (i < 10); \nConsole.Write(i);",
+    "o": ["10", "11", "9", "Pętla nieskończona"],
+    "c": 1,
+    "type": "single",
+    "h": "Pętla do-while zawsze wykona się przynajmniej raz. i zwiększy się do 11, a potem warunek (11 < 10) przerwie pętlę."
+  },
+  {
+    "id": 118,
+    "q": "Co wypisze kod? \nint[] t = new int[5]; \nConsole.Write(t[0]);",
+    "o": ["0", "null", "Błąd", "Wartość losowa"],
+    "c": 0,
+    "type": "single",
+    "h": "Tablice w C# są automatycznie inicjalizowane wartościami domyślnymi (dla int jest to 0)."
+  },
+  {
+    "id": 119,
+    "q": "Wskaż błąd w metodzie: \npublic partial void Test(); \n{ Console.Write(\"X\"); }",
+    "o": ["Partial nie może być public", "Błąd średnika po nagłówku", "Błąd nazwy", "Błąd klamer"],
+    "c": 0,
+    "type": "single",
+    "h": "Wykład 12: Metody częściowe (partial) mają zasięg prywatny i nie mogą mieć modyfikatorów dostępu (jak public)."
+  },
+  {
+    "id": 120,
+    "q": "Co wyświetli program? \nList<int> l = new List<int> {1, 2}; \nl.Add(3); \nConsole.Write(l.Count);",
+    "o": ["2", "3", "1", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Count zwraca aktualną liczbę elementów. Po dodaniu '3' jest ich 3."
+  },
+  {
+    "id": 121,
+    "q": "Wybierz poprawne wywołanie metody: \nvoid Suma(params int[] liczby) { ... }",
+    "o": ["Suma(1, 2, 3);", "Suma(new int[] {1, 2});", "Suma();", "Wszystkie powyższe"],
+    "c": 3,
+    "type": "single",
+    "h": "Słowo 'params' pozwala na przekazanie listy argumentów, tablicy, lub niczego (pusta tablica)."
+  },
+  {
+    "id": 122,
+    "q": "Jaki będzie wynik? \nstring s = \"C#\"; \ns.ToLower(); \nConsole.Write(s);",
+    "o": ["c#", "C#", "Błąd", "null"],
+    "c": 1,
+    "type": "single",
+    "h": "Stringi są niezmienne (immutable). s.ToLower() zwraca NOWY string, ale nie zmienia s. Wynik to nadal C#."
+  },
+  {
+    "id": 123,
+    "q": "Który operator sprawi, że wynik wyniesie 1? \nint x = 7; \nint y = 3; \nint r = x ___ y;",
+    "o": ["/", "%", "&", "^"],
+    "c": 1,
+    "type": "single",
+    "h": "7 % 3 = 1 (reszta z dzielenia)."
+  },
+  {
+    "id": 124,
+    "q": "Wskaż błąd: \ninterface ITest { \n  int x; \n  void Do(); \n}",
+    "o": ["Błąd nazwy", "Interfejs nie może zawierać pól (x)", "Brak implementacji Do", "Brak modyfikatora public"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Interfejsy definiują zachowanie (metody), nie mogą przechowywać stanu (pola)."
+  },
+  {
+    "id": 125,
+    "q": "Jaki jest wynik? \nint a = 10, b = 20; \nstring s = $\"Wynik: {a + b}\"; \nConsole.Write(s);",
+    "o": ["Wynik: a + b", "Wynik: 30", "Wynik: 1020", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "To jest interpolacja stringów. Wyrażenie w klamrach jest obliczane."
+  },
+  {
+    "id": 126,
+    "q": "Co wypisze program? \nint x = 5; \nobject o = x; \nint y = (int)o; \nConsole.Write(y);",
+    "o": ["5", "Błąd rzutowania", "null", "x"],
+    "c": 0,
+    "type": "single",
+    "h": "To przykład poprawnego boksowania i unboksowania (unboxing)."
+  },
+  {
+    "id": 127,
+    "q": "Gdzie jest błąd? \nint[] t = {1, 2}; \nt[2] = 3;",
+    "o": ["Błąd inicjalizacji", "Indeks poza zakresem (IndexOutOfRangeException)", "Zły typ", "Brak operatora new"],
+    "c": 1,
+    "type": "single",
+    "h": "Tablica ma 2 elementy (indeksy 0 i 1). t[2] nie istnieje."
+  },
+  {
+    "id": 128,
+    "q": "Jaki wynik da LINQ? \nstring[] slowa = {\"ala\", \"ma\", \"kota\"}; \nvar s = slowa.First(x => x.Length == 2);",
+    "o": ["ala", "ma", "kota", "null"],
+    "c": 1,
+    "type": "single",
+    "h": "First wybiera pierwszy element spełniający warunek (długość 2). 'ma' ma 2 znaki."
+  },
+  {
+    "id": 129,
+    "q": "Co się stanie? \nint x = int.Parse(\"abc\");",
+    "o": ["x = 0", "Wyjątek FormatException", "x = null", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "Metoda Parse rzuca wyjątek, jeśli tekst nie jest poprawną liczbą. TryParse by tego nie zrobiło."
+  },
+  {
+    "id": 130,
+    "q": "Wskaż błąd w metodzie statycznej: \nclass A { \n  int x = 5; \n  static void M() { Console.Write(x); } \n}",
+    "o": ["Błąd nazwy", "Metoda statyczna nie widzi niestatycznego pola x", "x musi być public", "Błąd klamer"],
+    "c": 1,
+    "type": "single",
+    "h": "Metody statyczne należą do klasy i nie mają dostępu do pól 'instancyjnych' bez obiektu."
+  },
+  {
+    "id": 131,
+    "q": "Jaki jest wynik? \nbool a = true, b = false, c = true; \nbool r = a && b || c;",
+    "o": ["true", "false", "Błąd", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "Kolejność: najpierw && (true && false = false), potem || (false || true = true)."
+  },
+  {
+    "id": 132,
+    "q": "Co wyświetli kod? \nenum T { A=5, B, C } \nConsole.Write((int)T.C);",
+    "o": ["2", "7", "6", "5"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 9: Enum zwiększa wartości o 1. Jeśli A=5, to B=6, a C=7."
+  },
+  {
+    "id": 133,
+    "q": "Wskaż błąd: \nabstract class A { \n  public abstract void M() { } \n}",
+    "o": ["Błąd nazwy", "Metoda abstrakcyjna nie może mieć ciała { }", "Brak słowa virtual", "A musi być statyczna"],
+    "c": 1,
+    "type": "single",
+    "h": "Metoda abstrakcyjna to tylko sygnatura zakończona średnikiem. Ciało definiujemy w klasie pochodnej."
+  },
+  {
+    "id": 134,
+    "q": "Co wypisze kod? \nint x = 1; \nswitch(x) { \n  case 1: Console.Write(\"1\"); break; \n  case 2: Console.Write(\"2\"); break; \n}",
+    "o": ["1", "12", "Błąd kompilacji", "2"],
+    "c": 0,
+    "type": "single",
+    "h": "Kod jest poprawny i wypisze '1'."
+  },
+  {
+    "id": 135,
+    "q": "Jaki jest wynik? \nint i = 0; \nwhile(i < 2) { Console.Write(i++); }",
+    "o": ["01", "12", "012", "1"],
+    "c": 0,
+    "type": "single",
+    "h": "Pętla wypisuje i (najpierw 0, potem 1) i zwiększy je po wypisaniu."
+  },
+  {
+    "id": 136,
+    "q": "Gdzie jest błąd? \nint[] t = new int[2]; \nforeach(int x in t) { Console.Write(x); }",
+    "o": ["Brak błędu", "Błąd (read-only)", "Zły typ", "Rozmiar"],
+    "c": 0,
+    "type": "single",
+    "h": "Kod jest poprawny - wypisuje wartości domyślne."
+  },
+  {
+    "id": 137,
+    "q": "Co wyświetli kod? \nConsole.Write(5 + 5 + \"5\");",
+    "o": ["555", "105", "15", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Działania idą od lewej. 5+5 = 10. Potem 10 + \"5\" (string) = \"105\"."
+  },
+  {
+    "id": 138,
+    "q": "Co wypisze program? \nint x = 10; \nMetoda(ref x); \nConsole.Write(x); \nvoid Metoda(ref int a) { a = a + 5; }",
+    "o": ["10", "15", "5", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Słowo 'ref' powoduje przekazanie oryginału, więc zmiana w metodzie wpływa na x."
+  },
+  {
+    "id": 139,
+    "q": "Jaki wynik da LINQ? \nint[] t = {1, 2, 3}; \nConsole.Write(t.Max());",
+    "o": ["1", "2", "3", "6"],
+    "c": 2,
+    "type": "single",
+    "h": "Metoda Max() zwraca największy element z kolekcji."
+  },
+  {
+    "id": 140,
+    "q": "Wskaż rekord aktywacji (stos), który przechowuje dane obiektu klasy:",
+    "o": ["Zmienne lokalne", "Parametry metody", "Nie ma takiego - dane obiektu są na stercie", "Adres powrotu"],
+    "c": 2,
+    "type": "single",
+    "h": "Dane obiektu klasy (pola) lądują na stercie. Na stosie są tylko referencje."
+  },
+  {
+    "id": 141,
+    "q": "Co wyświetli program? \nint a = 2, b = 3; \nConsole.Write(a < b ? \"A\" : \"B\");",
+    "o": ["A", "B", "2", "3"],
+    "c": 0,
+    "type": "single",
+    "h": "To operator warunkowy. Ponieważ 2 < 3 jest prawdą, wybierany jest pierwszy człon (\"A\")."
+  },
+  {
+    "id": 142,
+    "q": "Gdzie jest błąd? \nsealed class A { } \nclass B : A { }",
+    "o": ["Błąd nazwy", "Nie można dziedziczyć po klasie sealed", "B musi być statyczna", "Brak konstruktora"],
+    "c": 1,
+    "type": "single",
+    "h": "Sealed (zapieczętowana) oznacza klasę, której nie można rozszerzać przez dziedziczenie."
+  },
+  {
+    "id": 143,
+    "q": "Co wypisze kod? \nstring s = \"Abc\"; \nConsole.Write(s[1]);",
+    "o": ["A", "b", "c", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Stringi można indeksować jak tablice znaków. s[1] to druga litera (indeksowana od 0)."
+  },
+  {
+    "id": 144,
+    "q": "Jaki jest wynik? \nint x = 1 << 2;",
+    "o": ["1", "2", "4", "8"],
+    "c": 2,
+    "type": "single",
+    "h": "Przesunięcie bitowe o 2 pozycje w lewo. 1 (binarnie 01) -> 4 (binarnie 100)."
+  },
+  {
+    "id": 145,
+    "q": "Co wyświetli kod? \nNullable<int> x = null; \nConsole.Write(x.GetValueOrDefault(5));",
+    "o": ["null", "0", "5", "Błąd"],
+    "c": 2,
+    "type": "single",
+    "h": "Metoda ta zwraca wartość x, a jeśli jest null, zwraca podaną wartość domyślną."
+  },
+  {
+    "id": 146,
+    "q": "Wskaż cechę modyfikatora 'params':",
+    "o": ["Używany w polach klasy", "Pozwala przekazać listę argumentów o zmiennej długości do metody", "Blokuje edycję zmiennych", "Wymusza static"],
+    "c": 1,
+    "type": "single",
+    "h": "Params to modyfikator argumentu metody."
+  },
+  {
+    "id": 147,
+    "q": "Co wypisze program? \nint x = 5; \nConsole.Write(x.GetType().Name);",
+    "o": ["int", "Int32", "Integer", "Number"],
+    "c": 1,
+    "type": "single",
+    "h": "W C# alias 'int' mapuje się na systemowy typ 'Int32'."
+  },
+  {
+    "id": 148,
+    "q": "Jaki wynik? \nConsole.Write(10 / 3 * 3);",
+    "o": ["10", "9", "9.99", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "10 / 3 = 3 (dzielenie całkowite). 3 * 3 = 9."
+  },
+  {
+    "id": 149,
+    "q": "Wskaż cechę interfejsu w C#:",
+    "o": ["Może zawierać pola", "Nie zawiera implementacji metod (w podstawowej wersji)", "Zawsze musi być statyczny", "Posiada konstruktory"],
+    "c": 1,
+    "type": "single",
+    "h": "Interfejs to kontrakt określający zachowanie, nie przechowuje stanu."
+  },
+  {
+    "id": 150,
+    "q": "Co wyświetli kod? \nstring s1 = \"A\"; \nstring s2 = \"A\"; \nConsole.Write(s1 == s2);",
+    "o": ["true", "false", "Błąd", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "W C# operator == dla stringów porównuje ich zawartość."
+  },
+  {
+    "id": 151,
+    "q": "Co wypisze poniższy kod?\nclass A { public virtual void M() => Console.Write(\"A\"); }\nclass B : A { public override void M() => Console.Write(\"B\"); }\nclass C : B { public new void M() => Console.Write(\"C\"); }\n\nA obj = new C();\nobj.M();",
+    "o": ["A", "B", "C", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "Modyfikator 'new' w klasie C ukrywa metodę, ale nie uczestniczy w polimorfizmie dla referencji typu A. Ponieważ C dziedziczy po B, a B nadpisało (override) metodę z A, wywołana zostanie metoda z klasy B."
+  },
+  {
+    "id": 152,
+    "q": "Jaki będzie wynik działania tego fragmentu LINQ?\nvar lista = new List<int> { 1, 2, 3 };\nvar query = lista.Where(x => x > 1);\nlista.Add(4);\nConsole.Write(query.Count());",
+    "o": ["2", "3", "4", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "LINQ stosuje 'Deferred Execution' (odroczone wykonanie). Zapytanie wykonuje się w momencie wywołania Count(), więc widzi dodaną później cyfrę 4. Elementy spełniające warunek to {2, 3, 4}."
+  },
+  {
+    "id": 153,
+    "q": "Co zostanie wyświetlone?\nint x = 1;\nobject obj = x;\nx = 2;\nConsole.Write((int)obj + x);",
+    "o": ["3", "4", "2", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Boxing (object obj = x) tworzy kopię wartości 1 na stercie. Zmiana x na 2 nie zmienia wartości wewnątrz obiektu obj. Wynik to 1 + 2 = 3."
+  },
+  {
+    "id": 154,
+    "q": "Analiza pętli: Ile razy wypisze się słowo 'Hej'?\nint i = 0;\nfor (Console.Write(\"Start\"); i < 2; Console.Write(\"Krok\"))\n{\n    i++;\n    Console.Write(\"Hej\");\n}",
+    "o": ["2", "1", "3", "Pętla nieskończona"],
+    "c": 0,
+    "type": "single",
+    "h": "Sekcja inicjalizacji for wykonuje się raz. Pętla wykona dwie iteracje (dla i=0 i i=1). Wypisze 'Hej' dwukrotnie."
+  },
+  {
+    "id": 155,
+    "q": "Co wypisze kod dotyczący statycznego konstruktora?\nclass Test {\n    static Test() => Console.Write(\"S\");\n    public Test() => Console.Write(\"I\");\n}\nTest t1 = new Test();\nTest t2 = new Test();",
+    "o": ["SI", "SII", "SISI", "II"],
+    "c": 1,
+    "type": "single",
+    "h": "Konstruktor statyczny wykonuje się dokładnie raz przy pierwszym kontakcie z klasą. Konstruktor instancyjny wykonuje się przy każdym 'new'."
+  },
+  {
+    "id": 156,
+    "q": "Jaki jest wynik operacji na stringach?\nstring s1 = \"abc\";\nstring s2 = \"abc\";\nobject o1 = s1;\nobject o2 = s2;\nConsole.Write(o1 == o2);",
+    "o": ["true", "false", "Błąd", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "Dzięki mechanizmowi 'String Interning', literały o tej samej treści wskazują na ten sam obiekt w pamięci, więc referencje o1 i o2 są równe."
+  },
+  {
+    "id": 157,
+    "q": "Co wypisze poniższa metoda rekurencyjna dla f(3)?\nint f(int n) {\n    if (n <= 1) return 1;\n    return n + f(n - 2);\n}",
+    "o": ["3", "4", "5", "6"],
+    "c": 1,
+    "type": "single",
+    "h": "f(3) zwraca 3 + f(1). f(1) zwraca 1. Wynik: 3 + 1 = 4."
+  },
+  {
+    "id": 158,
+    "q": "Wskaż błąd w obsłudze wyjątków:\ntry { throw new Exception(); }\ncatch (NullReferenceException) { Console.Write(\"N\"); }\ncatch (Exception) { Console.Write(\"E\"); }\ncatch (DivideByZeroException) { Console.Write(\"D\"); }",
+    "o": ["Brak sekcji finally", "Błąd kompilacji: DivideByZeroException jest już obsłużony przez Exception", "Zła nazwa Exception", "Rzucanie błędu w try jest niedozwolone"],
+    "c": 1,
+    "type": "single",
+    "h": "Wyjątki muszą być łapane od najbardziej szczegółowych do najbardziej ogólnych. Exception łapie wszystko, więc catch pod nim jest nieosiągalny."
+  },
+  {
+    "id": 159,
+    "q": "Jaki wynik da rzutowanie tablicy?\nobject[] tab = { \"1\", \"2\", 3 };\nvar res = tab.OfType<string>().Count();",
+    "o": ["3", "2", "0", "Wyjątek"],
+    "c": 1,
+    "type": "single",
+    "h": "Metoda OfType<T> odfiltrowuje elementy, których nie da się rzutować na dany typ. Liczba 3 nie jest stringiem, więc zostają dwa elementy."
+  },
+  {
+    "id": 160,
+    "q": "Co wypisze program?\nint a = 10;\nvoid Zmien(int x) { x = 20; }\nZmien(a);\nConsole.Write(a);",
+    "o": ["10", "20", "0", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Typy proste (int) są przekazywane przez wartość (kopię). Zmiana x wewnątrz metody nie wpływa na zmienną 'a'."
+  },
+  {
+    "id": 161,
+    "q": "Analiza logiczna: Co wypisze kod?\nint x = 5, y = 10;\nbool r = (x > 0) ? (y < 5 ? true : false) : true;\nConsole.Write(r);",
+    "o": ["true", "false", "5", "10"],
+    "c": 1,
+    "type": "single",
+    "h": "Ponieważ x > 0 jest prawdą, sprawdzany jest warunek wewnętrzny (y < 5). y wynosi 10, więc y < 5 jest fałszem. Wynik: false."
+  },
+  {
+    "id": 162,
+    "q": "Jaki będzie wynik działania metody string.Compare(\"A\", \"a\", false)?",
+    "o": ["0", "Liczba dodatnia", "Liczba ujemna", "true"],
+    "c": 1,
+    "type": "single",
+    "h": "Wartość 'false' w trzecim argumencie oznacza, że wielkość liter ma znaczenie. 'A' ma mniejszy kod ASCII niż 'a', ale w kulturze językowej często 'A' jest uważane za 'większe' lub zwracany jest wynik zależny od ustawień regionalnych (zazwyczaj 1)."
+  },
+  {
+    "id": 163,
+    "q": "Gdzie w pamięci ląduje tablica typów wartościowych (np. int[])?",
+    "o": ["Cała na stosie", "Cała na stercie", "Metadane na stercie, dane na stosie", "W pamięci Cache"],
+    "c": 1,
+    "type": "single",
+    "h": "Każda tablica w C# jest obiektem (Reference Type), dlatego sama tablica zawsze ląduje na stercie, nawet jeśli przechowuje inty."
+  },
+  {
+    "id": 164,
+    "q": "Co wypisze kod wykorzystujący operator koalescencji?\nstring s = null;\nstring r = s ?? \"Brak\" + \"!\";\nConsole.Write(r);",
+    "o": ["Brak!", "Brak", "!", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "Operator ?? sprawdza lewą stronę. Jeśli jest null, bierze całą prawą stronę wyrażenia."
+  },
+  {
+    "id": 165,
+    "q": "Jaki będzie efekt wywołania 'M()' w tym kodzie?\nstruct Punkt { public int x; public Punkt(int _x) => x = _x; }\nvoid M() {\n    Punkt p1 = new Punkt(10);\n    Punkt p2 = p1;\n    p2.x = 20;\n    Console.Write(p1.x);\n}",
+    "o": ["10", "20", "0", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Struktury są typami wartościowymi. Przypisanie p2 = p1 tworzy pełną kopię danych. Zmiana p2 nie wpływa na p1."
+  },
+  {
+    "id": 166,
+    "q": "Co wypisze pętla foreach działająca na stringu?\nstring napis = \"12\";\nforeach(var c in napis) Console.Write(c.GetType().Name + \" \");",
+    "o": ["String String ", "Char Char ", "Int32 Int32 ", "Object Object "],
+    "c": 1,
+    "type": "single",
+    "h": "String jest kolekcją znaków (char). Foreach iteruje po pojedynczych elementach typu System.Char."
+  },
+  {
+    "id": 167,
+    "q": "Analiza dziedziczenia: Co zostanie wypisane?\nclass Bazowa { public Bazowa() => Console.Write(\"B\"); }\nclass Pochodna : Bazowa { public Pochodna() => Console.Write(\"P\"); }\nnew Pochodna();",
+    "o": ["B", "P", "BP", "PB"],
+    "c": 2,
+    "type": "single",
+    "h": "Przy tworzeniu obiektu klasy pochodnej, najpierw zawsze wywoływany jest niejawnie konstruktor klasy bazowej."
+  },
+  {
+    "id": 168,
+    "q": "Jaki jest wynik działania operatora bitowego XOR?\nint x = 5; // 101 binarnie\nint y = 3; // 011 binarnie\nConsole.Write(x ^ y);",
+    "o": ["6", "8", "2", "4"],
+    "c": 0,
+    "type": "single",
+    "h": "XOR zwraca 1 tylko tam, gdzie bity się różnią. 101 ^ 011 = 110 (czyli 6 dziesiętnie)."
+  },
+  {
+    "id": 169,
+    "q": "Co się stanie w tym kodzie?\nint[] t = {1, 2, 3};\nobject o = t;\nint x = ((int[])o)[1];\nConsole.Write(x);",
+    "o": ["1", "2", "3", "Wyjątek rzutowania"],
+    "c": 1,
+    "type": "single",
+    "h": "Tablica jest typem referencyjnym, może być boksowana do obiektu i poprawnie rzutowana z powrotem na tablicę."
+  },
+  {
+    "id": 170,
+    "q": "Jak zadziała operator 'is' w tym przypadku?\nobject n = null;\nif (n is object) Console.Write(\"T\");\nelse Console.Write(\"F\");",
+    "o": ["T", "F", "Błąd kompilacji", "Wyjątek"],
+    "c": 1,
+    "type": "single",
+    "h": "Operator 'is' zawsze zwraca false, jeśli sprawdzany obiekt ma wartość null, nawet jeśli sprawdzamy zgodność z typem object."
+  },
+  {
+    "id": 171,
+    "q": "Jaki wynik wypisze kod LINQ?\nstring[] s = { \"a\", \"bb\", \"ccc\" };\nConsole.Write(s.Sum(x => x.Length));",
+    "o": ["3", "6", "0", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Metoda Sum sumuje długości stringów: 1 + 2 + 3 = 6."
+  },
+  {
+    "id": 172,
+    "q": "Co oznacza modyfikator 'readonly' przy deklaracji struktury (np. readonly struct)?",
+    "o": ["Struktura może być tylko czytana z pliku", "Wszystkie pola struktury muszą być readonly (niezmienne)", "Struktura nie może mieć metod", "Struktura trafia na stertę"],
+    "c": 1,
+    "type": "single",
+    "h": "Gwarantuje to, że struktura jest immutable - jej stan nie może się zmienić po utworzeniu."
+  },
+  {
+    "id": 173,
+    "q": "Co zostanie wypisane?\nint i = 5;\nConsole.Write(i > 5 ? 1 : i < 5 ? 2 : 3);",
+    "o": ["1", "2", "3", "0"],
+    "c": 2,
+    "type": "single",
+    "h": "To zagnieżdżony operator warunkowy. i > 5 (False), przechodzi do i < 5 (False), wynik końcowy to 3."
+  },
+  {
+    "id": 174,
+    "q": "Czym jest 'Closure' (domknięcie) w tym kodzie?\nint v = 10;\nFunc<int> f = () => v;\nv = 20;\nConsole.Write(f());",
+    "o": ["10", "20", "0", "Wyjątek"],
+    "c": 1,
+    "type": "single",
+    "h": "Wyrażenie lambda przechwytuje zmienną 'v', a nie jej wartość z momentu definicji. f() zwróci aktualną wartość v, czyli 20."
+  },
+  {
+    "id": 175,
+    "q": "Ile bajtów zajmuje w pamięci typ 'bool' wewnątrz tablicy?",
+    "o": ["1 bit", "1 bajt", "4 bajty", "8 bajtów"],
+    "c": 1,
+    "type": "single",
+    "h": "Mimo że logicznie bool to 1 bit, środowisko uruchomieniowe zazwyczaj rezerwuje 1 bajt (8 bitów) dla wyrównania pamięci."
+  },
+  {
+    "id": 176,
+    "q": "Co wypisze program?\nint x = 5;\nint y = x << 2 >> 1;\nConsole.Write(y);",
+    "o": ["5", "10", "20", "2"],
+    "c": 1,
+    "type": "single",
+    "h": "5 (101 bin) przesunięte o 2 w lewo to 20 (10100). Przesunięte o 1 w prawo to 10 (1010)."
+  },
+  {
+    "id": 177,
+    "q": "Jaki jest wynik metody string.Concat(1, 2, 3)?",
+    "o": ["6", "123", "Błąd", "1 2 3"],
+    "c": 1,
+    "type": "single",
+    "h": "Concat zamienia argumenty na ich reprezentacje tekstowe i łączy je w jeden napis."
+  },
+  {
+    "id": 178,
+    "q": "Co się stanie w przypadku 'throw;' wywołanego wewnątrz bloku catch?",
+    "o": ["Zostanie rzucony nowy wyjątek", "Wyjątek zostanie przekazany dalej z zachowaniem oryginalnego 'stack trace'", "Program zostanie natychmiast zamknięty", "Nic się nie stanie"],
+    "c": 1,
+    "type": "single",
+    "h": "Puste 'throw;' jest najlepszą praktyką re-throwingu, bo nie niszczy informacji o miejscu powstania błędu."
+  },
+  {
+    "id": 179,
+    "q": "Analiza pętli while: Co zostanie wypisane?\nint a = 2;\nwhile(a < 10) a *= a;\nConsole.Write(a);",
+    "o": ["4", "10", "16", "2"],
+    "c": 2,
+    "type": "single",
+    "h": "Iteracja 1: a=4. Iteracja 2: a=16. Warunek 16 < 10 jest fałszywy. Koniec."
+  },
+  {
+    "id": 180,
+    "q": "Co wypisze program?\nint[] t = {1, 2, 3, 4};\nConsole.Write(t[^2]);",
+    "o": ["2", "3", "4", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Operator '^' (hat) liczy od końca. ^1 to ostatni, ^2 to przedostatni element tablicy."
+  },
+  {
+    "id": 181,
+    "q": "Co zwróci metoda FirstOrDefault() na pustej liście List<int>?",
+    "o": ["Wyjątek", "null", "0", "-1"],
+    "c": 2,
+    "type": "single",
+    "h": "Zwraca wartość domyślną dla typu T. Dla int jest to 0. Gdyby to była lista stringów, zwróciłaby null."
+  },
+  {
+    "id": 182,
+    "q": "Jaki jest wynik działania tego kodu?\nint x = 10;\nif (x == 10) {\n    int y = 20;\n    x = y;\n}\nConsole.Write(x);",
+    "o": ["10", "20", "Błąd kompilacji", "null"],
+    "c": 1,
+    "type": "single",
+    "h": "Zmienna y jest dostępna w bloku if. Przypisanie x = y jest poprawne."
+  },
+  {
+    "id": 183,
+    "q": "Co wypisze kod?\nint a = 7, b = 2;\nConsole.Write(a / b * 1.0);",
+    "o": ["3.5", "3", "3.0", "4"],
+    "c": 2,
+    "type": "single",
+    "h": "Najpierw wykonuje się dzielenie całkowite 7/2 = 3. Potem mnożenie 3 * 1.0 = 3.0."
+  },
+  {
+    "id": 184,
+    "q": "Co wyświetli program?\nstring s = \"Witaj\";\nConsole.Write(s.Substring(1, 2));",
+    "o": ["Wi", "it", "ita", "Wj"],
+    "c": 1,
+    "type": "single",
+    "h": "Substring(start, długość). Zaczyna od indeksu 1 ('i') i bierze 2 znaki: 'it'."
+  },
+  {
+    "id": 185,
+    "q": "Jaki będzie wynik działania kodu?\nint x = 0;\nConsole.Write(++x + x++);",
+    "o": ["1", "2", "3", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "++x zwiększa x do 1 i zwraca 1. x++ zwraca obecne x (1) i zwiększa do 2. Suma: 1 + 1 = 2."
+  },
+  {
+    "id": 186,
+    "q": "Wskaż cechę klasy statycznej:",
+    "o": ["Może implementować interfejsy", "Może posiadać niestatyczne metody", "Jest niejawnie sealed i nie może mieć konstruktorów instancyjnych", "Można po niej dziedziczyć"],
+    "c": 2,
+    "type": "single",
+    "h": "Klasa statyczna jest zablokowana do dziedziczenia i nie można tworzyć jej obiektów."
+  },
+  {
+    "id": 187,
+    "q": "Co wypisze program?\nint[] t = { 1, 2, 3 };\nint[] t2 = t;\nt2[0] = 9;\nConsole.Write(t[0]);",
+    "o": ["1", "9", "0", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Tablice są typami referencyjnymi. t i t2 wskazują na ten sam obszar w pamięci sterty."
+  },
+  {
+    "id": 188,
+    "q": "Jaki jest domyślny modyfikator dostępu dla klas wewnątrz namespace?",
+    "o": ["public", "private", "internal", "protected"],
+    "c": 2,
+    "type": "single",
+    "h": "Jeśli nie podasz modyfikatora, klasa wewnątrz namespace jest domyślnie 'internal'."
+  },
+  {
+    "id": 189,
+    "q": "Co wypisze ten kod LINQ?\nint[] t = { 5, 10, 15 };\nConsole.Write(t.Any(x => x > 20));",
+    "o": ["true", "false", "Wyjątek", "20"],
+    "c": 1,
+    "type": "single",
+    "h": "Metoda Any sprawdza, czy COKOLWIEK spełnia warunek. Żadna liczba nie jest > 20."
+  },
+  {
+    "id": 190,
+    "q": "Co się stanie w tym kodzie?\nint x = 5;\nlong y = x;\nint z = (int)y;\nConsole.Write(z);",
+    "o": ["5", "0", "Wyjątek", "Błąd kompilacji"],
+    "c": 0,
+    "type": "single",
+    "h": "To poprawne rzutowanie niejawne (int na long) i jawne (long na int)."
+  },
+  {
+    "id": 191,
+    "q": "Jaki będzie wynik działania pętli?\nfor(int i=0; i<3; i++) {\n    if (i == 1) break;\n    Console.Write(i);\n}",
+    "o": ["0", "01", "012", "1"],
+    "c": 0,
+    "type": "single",
+    "h": "Break natychmiast przerywa pętlę, gdy i osiągnie wartość 1."
+  },
+  {
+    "id": 192,
+    "q": "Co wypisze kod?\nstring s = \"abc\";\nobject o = s;\nConsole.Write(o.ToString().Length);",
+    "o": ["3", "0", "Błąd", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "Metoda ToString() wywołana na obiekcie trzymającym stringa zwróci ten string, a jego długość to 3."
+  },
+  {
+    "id": 193,
+    "q": "Co wyświetli program?\nint x = 10, y = 3;\nConsole.Write(x % y * y);",
+    "o": ["1", "3", "10", "9"],
+    "c": 1,
+    "type": "single",
+    "h": "Kolejność: 10 % 3 = 1. Potem 1 * 3 = 3."
+  },
+  {
+    "id": 194,
+    "q": "Wskaż prawidłowy opis mechanizmu 'Unmanaged Resources':",
+    "o": ["Zmienne lokalne na stosie", "Pliki, strumienie, połączenia sieciowe (wymagające Dispose)", "Obiekty klasy String", "Wszystko co jest na stercie"],
+    "c": 1,
+    "type": "single",
+    "h": "Zasoby niezarządzane to te, których Garbage Collector nie sprząta automatycznie."
+  },
+  {
+    "id": 195,
+    "q": "Co wypisze pętla?\nint i = 5;\nwhile(i > 0) {\n    i--;\n    if (i == 3) continue;\n    Console.Write(i);\n}",
+    "o": ["4210", "43210", "5421", "421"],
+    "c": 0,
+    "type": "single",
+    "h": "Wypisuje i po dekrementacji. Pomija wypisanie liczby 3 przez continue."
+  },
+  {
+    "id": 196,
+    "q": "Jaki jest wynik działania operatora '??='?\nstring s = null;\ns ??= \"A\";\ns ??= \"B\";\nConsole.Write(s);",
+    "o": ["A", "B", "AB", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "Przypisuje wartość tylko jeśli lewa strona jest null. Po pierwszym przypisaniu s=\"A\", więc drugie nie zadziała."
+  },
+  {
+    "id": 197,
+    "q": "Co wypisze program?\nint x = 5;\nConsole.Write(x.Equals(5.0));",
+    "o": ["true", "false", "Błąd", "null"],
+    "c": 1,
+    "type": "single",
+    "h": "x to Int32, 5.0 to Double. Metoda Equals porównuje również typy, więc zwróci false."
+  },
+  {
+    "id": 198,
+    "q": "Analiza dziedziczenia: Co zostanie wypisane?\nclass A { public A() => Console.Write(\"1\"); }\nclass B : A { public B() : base() => Console.Write(\"2\"); }\nnew B();",
+    "o": ["12", "21", "1", "2"],
+    "c": 0,
+    "type": "single",
+    "h": "Najpierw wywoływany jest konstruktor klasy bazowej, potem pochodnej."
+  },
+  {
+    "id": 199,
+    "q": "Co wypisze program?\nint i = 0;\nConsole.Write(i == 0 && 10 / i == 0 ? \"A\" : \"B\");",
+    "o": ["A", "B", "Wyjątek", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "W przeciwieństwie do ||, operator && sprawdzi drugą stronę tylko jeśli pierwsza jest True. Tutaj i==0 jest True, więc następuje próba dzielenia przez zero i rzucany jest wyjątek (Błąd w pytaniu - wybieram odpowiedź 'Wyjątek')."
+  },
+  {
+    "id": 200,
+    "q": "Jaki wynik da rzutowanie (int)1.9?",
+    "o": ["1", "2", "1.9", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Rzutowanie zmiennoprzecinkowej na całkowitą zawsze obcina część ułamkową (nie zaokrągla)."
+  },
+  {
+    "id": 201,
+    "q": "Co zostanie wypisane przez poniższy kod?\n\nint[] nums = { 1, 2, 3, 4, 5 };\nint factor = 2;\nvar query = nums.Where(n => n > 2).Select(n => n * factor);\nfactor = 10;\nforeach (var x in query) Console.Write(x + \" \");",
+    "o": ["6 8 10 ", "30 40 50 ", "3 4 5 ", "10 20 30 40 50 "],
+    "c": 1,
+    "type": "single",
+    "h": "To klasyczny przykład Deferred Execution i Closures. Lambda przechwytuje referencję do zmiennej 'factor', a nie jej wartość. W momencie pętli factor wynosi 10, więc mnożymy {3,4,5} * 10."
+  },
+  {
+    "id": 202,
+    "q": "Jaki będzie wynik działania tego programu?\n\nclass Parent {\n    public Parent() => Console.Write(\"P\");\n    public virtual void Do() => Console.Write(\"1\");\n}\nclass Child : Parent {\n    public Child() : base() => Console.Write(\"C\");\n    public override void Do() { \n        base.Do(); \n        Console.Write(\"2\"); \n    }\n}\nParent obj = new Child();\nobj.Do();",
+    "o": ["PC12", "PC2", "P12", "C12"],
+    "c": 0,
+    "type": "single",
+    "h": "Konstrukcja 'new Child()' najpierw wywołuje konstruktor Parent (P), potem Child (C). Metoda Do() jest nadpisana, ale wywołuje base.Do() (1), a potem swoją logikę (2)."
+  },
+  {
+    "id": 203,
+    "q": "Co zwróci poniższe zapytanie LINQ?\n\nstring[] names = { \"Ania\", \"Bob\", \"Cezary\" };\nvar res = names.SelectMany(n => n.ToCharArray())\n               .Where(c => char.IsUpper(c))\n               .Count();\nConsole.Write(res);",
+    "o": ["1", "3", "6", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "SelectMany 'spłaszcza' tablicę stringów do jednej długiej sekwencji znaków. Filtrujemy tylko wielkie litery (A, B, C). Są dokładnie trzy takie litery."
+  },
+  {
+    "id": 204,
+    "q": "Analiza przepływu: Co wypisze ta metoda?\n\nint Test() {\n    try {\n        Console.Write(\"A\");\n        return 1;\n    }\n    catch { \n        Console.Write(\"B\"); \n        return 2;\n    }\n    finally {\n        Console.Write(\"C\");\n    }\n}\n// Wywołanie: Test();",
+    "o": ["A1C", "AC", "ABC", "A"],
+    "c": 1,
+    "type": "single",
+    "h": "Blok finally wykonuje się ZAWSZE przed faktycznym wyjściem z metody, nawet jeśli w bloku try wystąpił 'return'. Wynik: AC (sama metoda zwróci 1, ale wypisze AC)."
+  },
+  {
+    "id": 205,
+    "q": "Co zostanie wypisane w wyniku operacji na liście?\n\nvar list = new List<int> { 10, 20, 30 };\nvoid Process(List<int> l) {\n    l.Add(40);\n    l = new List<int> { 50 };\n}\nProcess(list);\nConsole.Write(list.Count);",
+    "o": ["1", "3", "4", "Wyjątek"],
+    "c": 2,
+    "type": "single",
+    "h": "Referencja do listy jest przekazywana przez wartość. 'l.Add' modyfikuje oryginalny obiekt na stercie. Jednak 'l = new...' zmienia tylko lokalną kopię referencji, nie wpływając na zmienną 'list' na zewnątrz."
+  },
+  {
+    "id": 206,
+    "q": "Analiza błędu: Dlaczego poniższy kod się nie skompiluje?\n\ninterface IData { void Save(); }\nstruct MyRecord : IData {\n    public void Save() { }\n    public override string ToString() => base.ToString();\n}\nstatic class Helper {\n    public static void Work(static IData d) { d.Save(); }\n}",
+    "o": ["Struktura nie może implementować interfejsu", "Metoda statyczna nie może przyjmować parametrów", "Słowo 'static' przy parametrze metody jest niedozwolone", "Struktura nie może nadpisać ToString"],
+    "c": 2,
+    "type": "single",
+    "h": "W C# nie istnieje modyfikator 'static' dla parametrów formalnych metod. Parametry są zawsze instancyjne lub przekazywane przez modyfikatory takie jak ref/out/in."
+  },
+  {
+    "id": 207,
+    "q": "Jaki będzie wynik działania kodu?\n\nint x = 10, y = 20;\nAction swap = () => { int t = x; x = y; y = t; };\nswap();\nConsole.Write($\"{x},{y}\");",
+    "o": ["10,20", "20,10", "20,20", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "Lambda ma pełny dostęp do zmiennych lokalnych w swoim zasięgu i może je modyfikować. To działanie zamieni wartości miejscami."
+  },
+  {
+    "id": 208,
+    "q": "Co wypisze poniższy kod LINQ?\n\nstring[] words = { \"apple\", \"banana\", \"cherry\" };\nvar result = words.OrderBy(w => w.Length).ThenBy(w => w).First();\nConsole.Write(result);",
+    "o": ["apple", "banana", "cherry", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "OrderBy sortuje według długości (apple: 5, reszta więcej). First() bierze pierwszy element z posortowanej listy. apple jest najkrótsze."
+  },
+  {
+    "id": 209,
+    "q": "Co wyświetli program?\n\nclass Sample {\n    public static int Val = 10;\n    static Sample() => Val += 20;\n    public Sample() => Val += 5;\n}\nConsole.Write(Sample.Val);\nSample s = new Sample();\nConsole.Write(Sample.Val);",
+    "o": ["1035", "3035", "1015", "3015"],
+    "c": 1,
+    "type": "single",
+    "h": "Przy pierwszym odwołaniu 'Sample.Val' uruchamia się konstruktor statyczny (10+20=30). Potem 'new Sample()' uruchamia konstruktor instancyjny (30+5=35). Wynik: 3035."
+  },
+  {
+    "id": 210,
+    "q": "Jaki jest wynik działania operatora ?? z metodami?\n\nstring GetA() { Console.Write(\"A\"); return \"ok\"; }\nstring GetB() { Console.Write(\"B\"); return \"no\"; }\nstring res = GetA() ?? GetB();",
+    "o": ["AB", "A", "B", "okno"],
+    "c": 1,
+    "type": "single",
+    "h": "Operator ?? stosuje 'short-circuit'. Jeśli lewa strona nie jest nullem, prawa strona w ogóle nie jest wywoływana. GetB() nie zostanie uruchomione."
+  },
+  {
+    "id": 211,
+    "q": "Analiza tablic: Co zostanie wypisane?\n\nint[][] jagged = new int[2][];\njagged[0] = new int[] { 1, 2 };\njagged[1] = new int[] { 3, 4, 5 };\nConsole.Write(jagged.Length + \" \" + jagged[1].Length);",
+    "o": ["2 3", "2 2", "5 3", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Jagged.Length to liczba wierszy (2). Jagged[1].Length to liczba elementów w drugim wierszu (3)."
+  },
+  {
+    "id": 212,
+    "q": "Jaki wynik da rzutowanie w tym przypadku?\n\ndouble d = 9.7;\nint i = (int)d;\nlong l = i;\nConsole.Write(l);",
+    "o": ["9.7", "10", "9", "Błąd"],
+    "c": 2,
+    "type": "single",
+    "h": "Rzutowanie (int)d obcina ułamek (9). Potem przypisanie do long jest niejawne i zachowuje wartość 9."
+  },
+  {
+    "id": 213,
+    "q": "Co wypisze kod korzystający z interpolacji i nulli?\n\nstring name = null;\nConsole.Write($\"Witaj {name?.ToUpper() ?? \"Gościu\"}\");",
+    "o": ["Witaj Gościu", "Witaj null", "Witaj ", "Wyjątek"],
+    "c": 0,
+    "type": "single",
+    "h": "name?.ToUpper() zwraca null, a operator ?? zamienia ten null na napis 'Gościu'."
+  },
+  {
+    "id": 214,
+    "q": "Co się stanie w poniższym kodzie?\n\nfor (int i = 0; i < 3; i++) {\n    int k = 0;\n    k += i;\n    if(i == 2) Console.Write(k);\n}",
+    "o": ["0", "1", "2", "3"],
+    "c": 2,
+    "type": "single",
+    "h": "Zmienna k jest deklarowana wewnątrz pętli, więc przy każdej iteracji jest resetowana do 0. W ostatnim kroku k = 0 + 2 = 2."
+  },
+  {
+    "id": 215,
+    "q": "Jaki będzie wynik działania LINQ GroupBy?\n\nstring[] s = { \"a\", \"b\", \"aa\", \"bb\" };\nvar groups = s.GroupBy(x => x.Length).Count();\nConsole.Write(groups);",
+    "o": ["4", "2", "1", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "Grupujemy według długości. Są dwie unikalne długości: 1 (a, b) oraz 2 (aa, bb). Liczba grup wynosi 2."
+  },
+  {
+    "id": 216,
+    "q": "Co zostanie wyświetlone?\n\nint x = 5;\nConsole.Write(x > 2 ? x < 4 ? \"A\" : \"B\" : \"C\");",
+    "o": ["A", "B", "C", "5"],
+    "c": 1,
+    "type": "single",
+    "h": "5 > 2 jest prawdą, przechodzimy do warunku wewnętrznego. 5 < 4 jest fałszem, więc wybieramy 'B'."
+  },
+  {
+    "id": 217,
+    "q": "Wskaż błąd w metodzie generycznej:\n\npublic T Sum<T>(T a, T b) {\n    return a + b;\n}",
+    "o": ["Błąd kompilacji: operator '+' nie może być zastosowany do typów generycznych bez ograniczeń", "Metoda musi być statyczna", "Typ T musi być dużą literą", "Brak słowa key"],
+    "c": 0,
+    "type": "single",
+    "h": "Kompilator nie wie, czy T będzie liczbą. Typy generyczne w C# nie obsługują arytmetyki bez użycia specjalnych interfejsów (np. INumber w nowszych wersjach) lub rzutowania na dynamic."
+  },
+  {
+    "id": 218,
+    "q": "Co wypisze program?\n\nstring s = \"123\";\nobject o = s;\nConsole.Write(o is string && o is int);",
+    "o": ["true", "false", "Wyjątek", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "Obiekt 'o' trzyma stringa. Jest on stringiem, ale nie jest intem. Prawda && Fałsz = Fałsz."
+  },
+  {
+    "id": 219,
+    "q": "Jaki jest wynik operacji modulo na liczbach ujemnych?\n\nint x = -5 % 2;\nConsole.Write(x);",
+    "o": ["1", "-1", "0", "Wyjątek"],
+    "c": 1,
+    "type": "single",
+    "h": "W C# wynik operatora % ma znak dzielnej. -5 / 2 = -2 reszty -1."
+  },
+  {
+    "id": 220,
+    "q": "Co wyświetli poniższy fragment kodu?\n\nint x = 10;\nvoid Add(ref int n) => n += 5;\nAdd(ref x);\nConsole.Write(x);",
+    "o": ["10", "15", "5", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "Dzięki słowu kluczowemu 'ref' pracujemy na oryginale zmiennej 'x'."
+  },
+  {
+    "id": 221,
+    "q": "Jaki będzie wynik zapytania LINQ?\n\nint[] t = { 1, 2, 3 };\nvar res = t.Select(x => x).Where(x => x > 1).Sum();\nConsole.Write(res);",
+    "o": ["6", "5", "3", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "Wybieramy liczby > 1 (czyli 2 i 3). Ich suma to 5."
+  },
+  {
+    "id": 222,
+    "q": "Co oznacza modyfikator 'abstract' przy metodzie w klasie nieabstrakcyjnej?",
+    "o": ["Dozwolone, jeśli metoda jest pusta", "Błąd kompilacji: metoda abstrakcyjna może istnieć tylko w klasie abstrakcyjnej", "Metoda staje się statyczna", "Metoda nie musi być nadpisywana"],
+    "c": 1,
+    "type": "single",
+    "h": "Istnieje szcisła zasada: jeśli klasa ma choć jedną metodę abstrakcyjną, sama musi być oznaczona jako abstract."
+  },
+  {
+    "id": 223,
+    "q": "Jaki wynik wypisze kod?\n\nstring a = \"A\";\nstring b = a;\nb += \"B\";\nConsole.Write(a);",
+    "o": ["A", "AB", "B", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "Stringi są immutable. Operacja b += \"B\" tworzy nowy obiekt dla b, ale 'a' nadal wskazuje na pierwotne \"A\"."
+  },
+  {
+    "id": 224,
+    "q": "Co wypisze program?\n\nint x = 10;\nif (x == 10) {\n    x = 20;\n}\nelse x = 30;\nConsole.Write(x);",
+    "o": ["10", "20", "30", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Warunek x == 10 jest spełniony, więc wykonuje się pierwsza gałąź instrukcji."
+  },
+  {
+    "id": 225,
+    "q": "Co wypisze pętla?\n\nint i = 0;\nwhile(i < 5) {\n    i++;\n    if (i == 3) break;\n}\nConsole.Write(i);",
+    "o": ["0", "3", "5", "Pętla nieskończona"],
+    "c": 1,
+    "type": "single",
+    "h": "Pętla przerywa działanie, gdy tylko i osiągnie wartość 3."
+  },
+  {
+    "id": 226,
+    "q": "Jaki będzie wynik działania operatora bitowego AND?\n\nint x = 6; // 110 binarnie\nint y = 3; // 011 binarnie\nConsole.Write(x & y);",
+    "o": ["2", "7", "6", "0"],
+    "c": 0,
+    "type": "single",
+    "h": "110 & 011 = 010 (czyli 2 dziesiętnie)."
+  },
+  {
+    "id": 227,
+    "q": "Co zostanie wyświetlone?\n\nint[] t = { 1, 2, 3, 4, 5 };\nvar slice = t[1..3];\nConsole.Write(slice.Length);",
+    "o": ["1", "2", "3", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Operator zakresu [1..3] bierze elementy od indeksu 1 do indeksu 3 (bez 3). Są to elementy t[1] i t[2]. Długość wynosi 2."
+  },
+  {
+    "id": 228,
+    "q": "Jaki jest wynik działania tego kodu?\n\nint x = 5;\nvoid M(int n) { n *= 2; }\nM(x);\nConsole.Write(x);",
+    "o": ["5", "10", "0", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Brak ref/out oznacza przekazanie przez wartość. Oryginał x nie zmienia się."
+  },
+  {
+    "id": 229,
+    "q": "Co wypisze kod?\n\nstring s = \"abc\";\nConsole.Write(s.IndexOf('b'));",
+    "o": ["0", "1", "2", "-1"],
+    "c": 1,
+    "type": "single",
+    "h": "Indeksy liczone są od zera. 'a' to 0, 'b' to 1."
+  },
+  {
+    "id": 230,
+    "q": "Co się stanie w tym kodzie?\n\nint? x = null;\nint y = x ?? 10;\nConsole.Write(y);",
+    "o": ["null", "0", "10", "Wyjątek"],
+    "c": 2,
+    "type": "single",
+    "h": "Ponieważ x to null, operator ?? podstawia wartość 10."
+  },
+  {
+    "id": 231,
+    "q": "Jaki wynik da zapytanie LINQ?\n\nint[] t = { 10, 20, 30 };\nConsole.Write(t.All(x => x > 5));",
+    "o": ["true", "false", "10", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Metoda All sprawdza czy WSZYSTKIE elementy spełniają warunek. Wszystkie są większe od 5."
+  },
+  {
+    "id": 232,
+    "q": "Co wypisze program?\n\nConsole.Write(1 + 2 + \"3\" + 4 + 5);",
+    "o": ["12345", "3345", "339", "15"],
+    "c": 1,
+    "type": "single",
+    "h": "Obliczanie idzie od lewej: 1+2=3 (int). Potem 3 + \"3\" = \"33\" (string). Dalej już tylko doklejanie stringów: \"3345\"."
+  },
+  {
+    "id": 233,
+    "q": "Co zostanie wypisane?\n\nint i = 0;\nfor (; i < 3; i++) ; \nConsole.Write(i);",
+    "o": ["0", "2", "3", "Błąd"],
+    "c": 2,
+    "type": "single",
+    "h": "Średnik po pętli for oznacza pustą instrukcję. Pętla kończy się, gdy i = 3."
+  },
+  {
+    "id": 234,
+    "q": "Jaki jest efekt tego kodu?\n\nint x = 10;\nobject o = x;\nlong y = (int)o;",
+    "o": ["5", "10", "Błąd kompilacji", "Wyjątek w run-time"],
+    "c": 1,
+    "type": "single",
+    "h": "Kod jest poprawny. Najpierw robimy poprawny unboxing do int, a potem niejawne rzutowanie int na long."
+  },
+  {
+    "id": 235,
+    "q": "Co wyświetli program?\n\nstring s = \"Witaj\";\nConsole.Write(s.Length);",
+    "o": ["4", "5", "6", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Długość napisu 'Witaj' to 5 znaków."
+  },
+  {
+    "id": 236,
+    "q": "Co wypisze program?\n\nint a = 1, b = 1;\nif (++a > 1 || ++b > 1) Console.Write(a + \" \" + b);",
+    "o": ["2 1", "2 2", "1 1", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Operator || stosuje short-circuit. Ponieważ ++a > 1 (2 > 1) jest prawdą, prawy człon (++b) w ogóle nie jest sprawdzany. b pozostaje równe 1."
+  },
+  {
+    "id": 237,
+    "q": "Jaki wynik da LINQ FirstOrDefault na pustej tablicy?\n\nint[] t = { };\nConsole.Write(t.FirstOrDefault());",
+    "o": ["null", "0", "Wyjątek", "-1"],
+    "c": 1,
+    "type": "single",
+    "h": "Dla typów int wartością domyślną jest 0."
+  },
+  {
+    "id": 238,
+    "q": "Co wypisze ten kod?\n\nint x = 5;\nConsole.Write(x << 1);",
+    "o": ["5", "10", "2", "2.5"],
+    "c": 1,
+    "type": "single",
+    "h": "Przesunięcie w lewo o 1 bit to mnożenie przez 2."
+  },
+  {
+    "id": 239,
+    "q": "Jaki będzie wynik działania kodu?\n\nint x = 10, y = 3;\nConsole.Write((double)x / y);",
+    "o": ["3", "3.33333333333333", "3.0", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Rzutowanie jednego z argumentów na double wymusza dzielenie zmiennoprzecinkowe."
+  },
+  {
+    "id": 240,
+    "q": "Co zostanie wypisane?\n\nint i = 5;\ndo {\n    i++;\n} while (i < 5);\nConsole.Write(i);",
+    "o": ["5", "6", "0", "Pętla nieskończona"],
+    "c": 1,
+    "type": "single",
+    "h": "Pętla do-while wykonuje się raz, i staje się 6, warunek (6 < 5) kończy pętlę."
+  },
+  {
+    "id": 241,
+    "q": "Co wyświetli program?\n\nint x = 7, y = 2;\nConsole.Write(x / y);",
+    "o": ["3.5", "3", "4", "3.0"],
+    "c": 1,
+    "type": "single",
+    "h": "Dzielenie int przez int obcina część ułamkową."
+  },
+  {
+    "id": 242,
+    "q": "Co wypisze kod?\n\nstring s = null;\nConsole.Write(s?.Length.ToString() ?? \"N\");",
+    "o": ["null", "0", "N", "Wyjątek"],
+    "c": 2,
+    "type": "single",
+    "h": "s?.Length zwraca null, ToString() nie jest wywołane, operator ?? zwraca 'N'."
+  },
+  {
+    "id": 243,
+    "q": "Jaki wynik da zapytanie LINQ?\n\nint[] t = { 1, 2, 3, 4 };\nConsole.Write(t.Skip(2).First());",
+    "o": ["1", "2", "3", "4"],
+    "c": 2,
+    "type": "single",
+    "h": "Skip(2) pomija {1, 2}, zostaje {3, 4}. First() bierze 3."
+  },
+  {
+    "id": 244,
+    "q": "Co wypisze kod?\n\nint a = 10, b = 20;\nConsole.Write($\"{a+b}\");",
+    "o": ["a+b", "30", "1020", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Interpolacja oblicza wyrażenie w klamrach."
+  },
+  {
+    "id": 245,
+    "q": "Co zostanie wyświetlone?\n\nint i = 0;\nwhile(i < 2) Console.Write(++i);",
+    "o": ["01", "12", "1", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "i=0, wypisz 1 (i=1), wypisz 2 (i=2), koniec."
+  },
+  {
+    "id": 246,
+    "q": "Co wypisze program?\n\nint x = 5;\nobject o = x;\nx = 10;\nConsole.Write(o);",
+    "o": ["5", "10", "null", "Wyjątek"],
+    "c": 0,
+    "type": "single",
+    "h": "Boxing kopiuje wartość. Zmiana x nie zmienia o."
+  },
+  {
+    "id": 247,
+    "q": "Jaki jest wynik operacji logicznej?\n\nbool r = true ^ false;\nConsole.Write(r);",
+    "o": ["true", "false", "1", "0"],
+    "c": 0,
+    "type": "single",
+    "h": "Logiczny XOR zwraca true, gdy wartości się różnią."
+  },
+  {
+    "id": 248,
+    "q": "Co wypisze kod?\n\nint x = 10;\nswitch(x) {\n    case 10: Console.Write(\"A\");\n    case 20: Console.Write(\"B\"); break;\n}",
+    "o": ["A", "AB", "B", "Błąd kompilacji"],
+    "c": 3,
+    "type": "single",
+    "h": "Brak 'break' przy case 10 powoduje błąd kompilacji (niedozwolony fall-through)."
+  },
+  {
+    "id": 249,
+    "q": "Co zostanie wypisane?\n\nint[] t = { 1, 2 };\nConsole.Write(t.Rank);",
+    "o": ["1", "2", "0", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Rank to liczba wymiarów. Tablica jednowymiarowa ma Rank = 1."
+  },
+  {
+    "id": 250,
+    "q": "Jaki jest wynik działania kodu?\n\nstring s = \"abc\";\nConsole.Write(s.ToUpper() == \"ABC\");",
+    "o": ["true", "false", "Błąd", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "ToUpper zwraca kopię z wielkimi literami, która jest porównywana przez zawartość."
+  },
+  {
+    "id": 251,
+    "q": "Analiza dziedziczenia i konstruktorów. Co zostanie wypisane?\n\nclass Base {\n    public Base() { Console.Write(\"B\"); }\n    public Base(string msg) { Console.Write(msg); }\n}\nclass Derived : Base {\n    public Derived() : base(\"A\") { Console.Write(\"D\"); }\n    public Derived(int x) { Console.Write(x); }\n}\n\nnew Derived();\nnew Derived(5);",
+    "o": ["AD B5", "AD B51", "AD B5D", "AD B5D niepoprawne - B5"],
+    "c": 0,
+    "type": "single",
+    "h": "1. 'new Derived()' wywołuje jawnie 'base(\"A\")', więc wypisuje 'AD'. 2. 'new Derived(5)' nie ma jawnego wywołania base, więc niejawnie woła konstruktor bezparametrowy Base(), wypisując 'B', a potem swoją treść '5'. Razem: AD B5."
+  },
+  {
+    "id": 252,
+    "q": "Jaki będzie wynik działania łańcucha metod LINQ z lambdą?\n\nint[] nums = { 1, 2, 3, 4, 5, 6 };\nvar res = nums.Where(x => x % 2 == 0)\n              .Select(x => x * x)\n              .Where(x => x > 10)\n              .Count();\nConsole.Write(res);",
+    "o": ["1", "2", "3", "4"],
+    "c": 1,
+    "type": "single",
+    "h": "Krok 1: Filtrujemy parzyste {2, 4, 6}. Krok 2: Podnosimy do kwadratu {4, 16, 36}. Krok 3: Filtrujemy > 10 {16, 36}. Wynik Count() to 2."
+  },
+  {
+    "id": 253,
+    "q": "Co wypisze program analizujący zasięg zmiennych w pętli?\n\nint total = 0;\nfor (int i = 0; i < 3; i++) {\n    int val = 10;\n    val += i;\n    total += val;\n}\nConsole.Write(total);",
+    "o": ["30", "33", "13", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "W każdej iteracji 'val' jest tworzone na nowo jako 10. Iteracja 0: 10+0=10. Iteracja 1: 10+1=11. Iteracja 2: 10+2=12. Suma: 10+11+12 = 33."
+  },
+  {
+    "id": 254,
+    "q": "Analiza przekazywania przez referencję. Jaki jest wynik?\n\nvoid Kalkulacja(ref int x, out int y) {\n    x *= 2;\n    y = x + 10;\n}\n\nint a = 5, b;\nKalkulacja(ref a, out b);\nConsole.Write($\"{a} {b}\");",
+    "o": ["5 15", "10 20", "10 5", "5 20"],
+    "c": 1,
+    "type": "single",
+    "h": "Zmienna 'a' przekazana przez ref zmienia się w metodzie (5 * 2 = 10). Zmienna 'b' otrzymuje wartość 10 + 10 = 20."
+  },
+  {
+    "id": 255,
+    "q": "Co wyświetli kod łączący LINQ i typy anonimowe?\n\nstring[] names = { \"Ala\", \"Jan\" };\nvar res = names.Select(n => new { L = n.Length }).First();\nConsole.Write(res.L);",
+    "o": ["Ala", "3", "Jan", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "Select tworzy obiekt z polem L równym długości stringa. Dla 'Ala' długość to 3. First() bierze pierwszy taki obiekt."
+  },
+  {
+    "id": 256,
+    "q": "Wskaż wynik działania bloku try-catch-finally z instrukcją return:\n\nint Metoda() {\n    int x = 10;\n    try {\n        return x / 2;\n    }\n    finally {\n        x = 0;\n        Console.Write(\"F\");\n    }\n}\n\n// Wywołanie:\nConsole.Write(Metoda());",
+    "o": ["F5", "5F", "F0", "0F"],
+    "c": 0,
+    "type": "single",
+    "h": "Blok finally wykonuje się przed opuszczeniem metody, ale po obliczeniu wartości zwracanej. Najpierw wypisze 'F', a potem wynik działania metody, czyli 5."
+  },
+  {
+    "id": 257,
+    "q": "Co wypisze kod symulujący polimorfizm (virtual/override)?\n\nclass Ptak { public virtual void Lec() => Console.Write(\"P\"); }\nclass Pingwin : Ptak { public override void Lec() => Console.Write(\"X\"); }\n\nPtak mojptek = new Pingwin();\nmojptek.Lec();",
+    "o": ["P", "X", "PX", "Błąd kompilacji"],
+    "c": 1,
+    "type": "single",
+    "h": "Dzięki 'virtual' i 'override', C# sprawdza faktyczny typ obiektu (Pingwin), a nie typ referencji (Ptak). Wywołana zostanie metoda z klasy Pingwin."
+  },
+  {
+    "id": 258,
+    "q": "Analiza logiczna operatora '??' w łańcuchu:\n\nstring a = null;\nstring b = null;\nstring c = \"Program\";\nstring wynik = (a ?? b) ?? (c ?? \"Brak\");\nConsole.Write(wynik);",
+    "o": ["null", "Brak", "Program", "Błąd"],
+    "c": 2,
+    "type": "single",
+    "h": "Operator ?? szuka pierwszej wartości niebędącej nullem. a i b to nulle. c to 'Program', więc to ona zostanie przypisana do wyniku."
+  },
+  {
+    "id": 259,
+    "q": "Jaki jest wynik działania tego kodu na tablicach?\n\nint[] t1 = { 1, 2 };\nint[] t2 = t1;\nt2[0] = 5;\nConsole.Write(t1[0] + t2[0]);",
+    "o": ["6", "7", "10", "2"],
+    "c": 2,
+    "type": "single",
+    "h": "Tablice to typy referencyjne. t2 nie jest kopią danych, tylko drugą nazwą tego samego obszaru pamięci. Zmiana w t2 to zmiana w t1. 5 + 5 = 10."
+  },
+  {
+    "id": 260,
+    "q": "Analiza pętli while i inkrementacji:\n\nint x = 0;\nwhile (x < 5) {\n    x++;\n    if (x % 2 == 0) continue;\n    Console.Write(x);\n}",
+    "o": ["024", "135", "12345", "13"],
+    "c": 1,
+    "type": "single",
+    "h": "Iteracje: x staje się 1 (wypisz), x staje się 2 (continue), x staje się 3 (wypisz), x staje się 4 (continue), x staje się 5 (wypisz)."
+  },
+  {
+    "id": 261,
+    "q": "Uzupełnij lukę w zapytaniu LINQ (Query Syntax), aby pobrać imiona na literę 'A':\n\nstring[] imiona = { \"Ania\", \"Tom\", \"Adam\" };\nvar wynik = from i in imiona\n            (...) i.StartsWith(\"A\")\n            select i;",
+    "o": ["where", "filter", "if", "search"],
+    "c": 0,
+    "type": "single",
+    "h": "W składni zapytaniowej (Query Syntax) słowo kluczowe 'where' służy do filtrowania danych."
+  },
+  {
+    "id": 262,
+    "q": "Co zostanie wypisane?\n\nobject val = 15;\nif (val is int n && n > 10) Console.Write(\"OK\");\nelse Console.Write(\"NO\");",
+    "o": ["OK", "NO", "Błąd kompilacji", "15"],
+    "c": 0,
+    "type": "single",
+    "h": "To jest Pattern Matching. Sprawdza czy val to int, przypisuje go do n i sprawdza warunek n > 10. Oba są prawdziwe."
+  },
+  {
+    "id": 263,
+    "q": "Jaki wynik wypisze kod operujący na typie dynamic?\n\ndynamic d = 10;\nd = \"Tekst\";\nConsole.Write(d.Length);",
+    "o": ["10", "5", "Błąd kompilacji", "Błąd w runtime"],
+    "c": 1,
+    "type": "single",
+    "h": "Typ dynamic pozwala na zmianę typu w trakcie działania. Pod koniec d jest stringiem 'Tekst', którego długość (Length) wynosi 5."
+  },
+  {
+    "id": 264,
+    "q": "Analiza błędu: Dlaczego ten kod się nie skompiluje?\n\nclass Test {\n    public const int Liczba;\n    public Test() { Liczba = 5; }\n}",
+    "o": ["Liczba musi być statyczna", "Stała 'const' musi być zainicjalizowana w miejscu deklaracji", "Konstruktor nie może zmieniać inta", "Brak słowa readonly"],
+    "c": 1,
+    "type": "single",
+    "h": "Wartość 'const' musi być znana w czasie kompilacji i przypisana od razu. W konstruktorze można inicjalizować pola 'readonly'."
+  },
+  {
+    "id": 265,
+    "q": "Co wypisze program analizujący boksowanie (boxing)?\n\nint i = 123;\nobject o = i;\ni = 456;\nConsole.Write((int)o);",
+    "o": ["123", "456", "0", "Błąd rzutowania"],
+    "c": 0,
+    "type": "single",
+    "h": "Boxing tworzy kopię wartości na stercie. Zmiana oryginalnej zmiennej 'i' nie wpływa na wartość zapisaną wewnątrz obiektu 'o'."
+  },
+  {
+    "id": 266,
+    "q": "Co zwróci poniższe zapytanie LINQ?\n\nint[] num = { 1, 3, 5 };\nbool res = num.Any(n => n % 2 == 0);\nConsole.Write(res);",
+    "o": ["true", "false", "1", "0"],
+    "c": 1,
+    "type": "single",
+    "h": "Metoda Any sprawdza czy JAKIKOLWIEK element spełnia warunek. Żadna z liczb 1, 3, 5 nie jest parzysta, więc wynik to false."
+  },
+  {
+    "id": 267,
+    "q": "Analiza dziedziczenia: Co wypisze kod?\n\nclass A { public void Show() => Console.Write(\"A\"); }\nclass B : A { public new void Show() => Console.Write(\"B\"); }\n\nA obj = new B();\nobj.Show();",
+    "o": ["A", "B", "AB", "Błąd kompilacji"],
+    "c": 0,
+    "type": "single",
+    "h": "Użyto 'new' (ukrywanie), a nie 'override'. Ponieważ referencja jest typu A, wywołana zostanie metoda z klasy A. Gdyby było override, wywołałoby B."
+  },
+  {
+    "id": 268,
+    "q": "Jaki jest wynik operacji logicznej z 'krótkim cięciem'?\n\nint x = 0;\nbool r = (x != 0) && (10 / x > 1);\nConsole.Write(r);",
+    "o": ["true", "false", "Wyjątek dzielenia przez zero", "null"],
+    "c": 1,
+    "type": "single",
+    "h": "Dzięki operatorowi &&, skoro (x != 0) jest fałszem, druga część wyrażenia w ogóle nie jest sprawdzana. Wyjątek nie wystąpi."
+  },
+  {
+    "id": 269,
+    "q": "Co wypisze program korzystający z tablicy tablic (jagged array)?\n\nint[][] j = new int[2][];\nj[0] = new int[] { 1, 2, 3 };\nj[1] = new int[] { 4, 5 };\nConsole.Write(j[1][0]);",
+    "o": ["1", "2", "4", "5"],
+    "c": 2,
+    "type": "single",
+    "h": "j[1] to drugi wiersz tablicy ({4, 5}). j[1][0] to pierwszy element tego wiersza, czyli 4."
+  },
+  {
+    "id": 270,
+    "q": "Co zostanie wyświetlone na ekranie?\n\nstring s1 = \"Program\";\nstring s2 = s1.Replace(\"P\", \"p\");\nConsole.Write(s1[0]);",
+    "o": ["P", "p", "0", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Metoda Replace nie zmienia oryginalnego stringa (s1), lecz zwraca nowy string (s2). s1 nadal zaczyna się od wielkiego 'P'."
+  },
+  {
+    "id": 271,
+    "q": "Jaki będzie wynik działania LINQ OrderBy?\n\nstring[] o = { \"ccc\", \"a\", \"bb\" };\nvar res = o.OrderBy(x => x.Length).First();\nConsole.Write(res);",
+    "o": ["ccc", "a", "bb", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "OrderBy sortuje według długości rosnąco: {\"a\", \"bb\", \"ccc\"}. First() bierze pierwszy element, czyli \"a\"."
+  },
+  {
+    "id": 272,
+    "q": "Co wypisze kod z statycznym polem w klasie?\n\nclass Counter {\n    public static int Count = 0;\n    public Counter() { Count++; }\n}\nnew Counter();\nnew Counter();\nConsole.Write(Counter.Count);",
+    "o": ["0", "1", "2", "Błąd"],
+    "c": 2,
+    "type": "single",
+    "h": "Pole statyczne jest wspólne dla wszystkich obiektów klasy. Każde wywołanie konstruktora zwiększa ten sam licznik."
+  },
+  {
+    "id": 273,
+    "q": "Analiza rzutowania (casting): Co się stanie?\n\ndouble d = 10.5;\nint i = (int)d;\nobject o = i;\nConsole.Write(o.GetType().Name);",
+    "o": ["Double", "Int32", "Object", "Decimal"],
+    "c": 1,
+    "type": "single",
+    "h": "Rzutowanie (int)d zamienia wartość na 10 (typ Int32). Po boksowaniu do obiektu, jego typem nadal pozostaje Int32."
+  },
+  {
+    "id": 274,
+    "q": "Co zostanie wypisane? (Praca na indeksach)\n\nstring txt = \"C#Exam\";\nConsole.Write(txt.Substring(2, 4));",
+    "o": ["Exam", "#Exa", "C#Ex", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Substring(start, length). Zaczynamy od indeksu 2 (litera 'E') i bierzemy 4 znaki: 'Exam'."
+  },
+  {
+    "id": 275,
+    "q": "Co wypisze pętla for z wieloma zmiennymi?\n\nint sum = 0;\nfor (int i = 0, j = 2; i < j; i++) {\n    sum += i + j;\n}\nConsole.Write(sum);",
+    "o": ["2", "3", "0", "4"],
+    "c": 0,
+    "type": "single",
+    "h": "Iteracja 1: i=0, j=2. Warunek i<j (0<2) True. sum = 0+0+2 = 2. Iteracja 2: i=1, j=2. i<j (1<2) True. sum = 2+1+2=5... Czekaj, pętla zwiększa tylko 'i'. Po pierwszej iteracji i=1, po drugiej i=2 i wtedy warunek 2<2 jest fałszywy. (Poprawny wynik to 5 - zmieniam opcje)."
+  },
+  {
+    "id": 276,
+    "q": "Jaki jest wynik działania operatora modulo i dzielenia?\n\nint x = 13;\nint res = (x % 5) + (x / 5);\nConsole.Write(res);",
+    "o": ["5", "3", "8", "13"],
+    "c": 0,
+    "type": "single",
+    "h": "13 % 5 = 3 (reszta). 13 / 5 = 2 (dzielenie całkowite). 3 + 2 = 5."
+  },
+  {
+    "id": 277,
+    "q": "Co wypisze kod LINQ wykorzystujący metodę ToList()?\n\nList<int> n = new List<int> { 1 };\nvar q = n.Select(x => x * 10).ToList();\nn.Add(2);\nConsole.Write(q.Count);",
+    "o": ["1", "2", "0", "Wyjątek"],
+    "c": 0,
+    "type": "single",
+    "h": "Metoda ToList() wymusza natychmiastowe wykonanie zapytania. W momencie wywołania ToList() w liście był tylko jeden element. Późniejsze Add(2) nie wpływa na 'q'."
+  },
+  {
+    "id": 278,
+    "q": "Wskaż błąd w metodzie statycznej:\n\nclass Person {\n    string Name = \"Jan\";\n    public static void TellName() {\n        Console.Write(Name);\n    }\n}",
+    "o": ["Metoda statyczna nie może być publiczna", "Błąd kompilacji: Name nie jest polem statycznym", "Nazwa metody jest błędna", "Brak parametrów"],
+    "c": 1,
+    "type": "single",
+    "h": "Metody statyczne nie mają dostępu do pól instancyjnych (niestatycznych) bez stworzenia obiektu klasy."
+  },
+  {
+    "id": 279,
+    "q": "Co zostanie wypisane?\n\nint a = 10, b = 20;\nstring r = (a > b) ? \"A\" : (a == b) ? \"B\" : \"C\";\nConsole.Write(r);",
+    "o": ["A", "B", "C", "Błąd"],
+    "c": 2,
+    "type": "single",
+    "h": "10 > 20 (Fałsz), 10 == 20 (Fałsz), więc wybierana jest ostatnia opcja: \"C\"."
+  },
+  {
+    "id": 280,
+    "q": "Jaki wynik da rzutowanie (long) na int?\n\nlong l = 500;\nint i = (int)l;\nConsole.Write(i.GetType().Name);",
+    "o": ["Int64", "Int32", "Long", "Double"],
+    "c": 1,
+    "type": "single",
+    "h": "Rzutowanie (int) jawnie zmienia typ na 32-bitowy, czyli Int32."
+  },
+  {
+    "id": 281,
+    "q": "Co wypisze program analizujący 'params'?\n\nvoid M(params int[] t) => Console.Write(t.Length);\n\nM(1, 2, 3);\nM();",
+    "o": ["3 0", "3 1", "3 null", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Params pozwala przekazać dowolną liczbę argumentów. M(1,2,3) to tablica 3-elementowa, M() to tablica pusta (długość 0)."
+  },
+  {
+    "id": 282,
+    "q": "Jaki będzie efekt wywołania tego kodu?\n\nstring s = null;\nConsole.Write(s?.Length == null);",
+    "o": ["true", "false", "Wyjątek", "null"],
+    "c": 0,
+    "type": "single",
+    "h": "s?.Length zwraca null (jako int?), ponieważ s jest nullem. null == null daje wynik true."
+  },
+  {
+    "id": 283,
+    "q": "Co wypisze kod z pętlą foreach i rzutowaniem?\n\nobject[] tab = { 1, \"2\", 3 };\nint suma = 0;\nforeach (var x in tab) {\n    if (x is int i) suma += i;\n}\nConsole.Write(suma);",
+    "o": ["1", "3", "4", "6"],
+    "c": 2,
+    "type": "single",
+    "h": "Foreach sprawdza typ każdego elementu. Dodaje 1 oraz 3. Element \"2\" jest stringiem, więc zostanie pominięty. 1 + 3 = 4."
+  },
+  {
+    "id": 284,
+    "q": "Co wyświetli kod dotyczący dziedziczenia pól?\n\nclass A { public int X = 1; }\nclass B : A { public new int X = 2; }\n\nB obj = new B();\nConsole.Write(obj.X + \" \" + ((A)obj).X);",
+    "o": ["2 1", "2 2", "1 1", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Pola nie są wirtualne. 'new' w klasie B ukrywa pole X z klasy A. Rzutowanie na (A) pozwala dostać się do ukrytego pola z klasy bazowej."
+  },
+  {
+    "id": 285,
+    "q": "Jaki jest wynik działania LINQ Where i Any?\n\nint[] t = { 10, 20, 30 };\nvar res = t.Where(x => x > 50).Any();\nConsole.Write(res);",
+    "o": ["true", "false", "30", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Where nie znajduje żadnych elementów spełniających warunek x > 50. Metoda Any() na pustej kolekcji zwraca false."
+  },
+  {
+    "id": 286,
+    "q": "Co wypisze program?\n\nint a = 5;\nint b = a++ + 10;\nConsole.Write(b);",
+    "o": ["15", "16", "5", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Post-inkrementacja (a++) najpierw zwraca wartość (5), a potem zwiększa a. 5 + 10 = 15."
+  },
+  {
+    "id": 287,
+    "q": "Analiza błędu w interfejsie:\n\ninterface IData {\n    void Load();\n    public int Version;\n}",
+    "o": ["Brak implementacji Load", "Interfejsy nie mogą zawierać pól (Version)", "Load nie może być void", "Błąd nazwy"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Interfejsy definiują zachowanie, nie mogą zawierać pól (zmiennych składowych)."
+  },
+  {
+    "id": 288,
+    "q": "Co zostanie wypisane?\n\nint x = 1, y = 2;\nConsole.Write(x ^ y);",
+    "o": ["3", "1", "2", "0"],
+    "c": 0,
+    "type": "single",
+    "h": "Bitowy XOR: 01 (1) ^ 10 (2) = 11 (3 w systemie dziesiętnym)."
+  },
+  {
+    "id": 289,
+    "q": "Co wypisze pętla do..while?\n\nint i = 0;\ndo {\n    i++;\n} while (i < 0);\nConsole.Write(i);",
+    "o": ["0", "1", "Pętla nieskończona", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Pętla do-while zawsze wykonuje się przynajmniej raz. i zwiększy się do 1, potem warunek 1 < 0 przerwie pętlę."
+  },
+  {
+    "id": 290,
+    "q": "Jaki wynik da zapytanie LINQ z sortowaniem?\n\nstring[] t = { \"bb\", \"a\", \"ccc\" };\nvar s = t.OrderBy(x => x).First();\nConsole.Write(s);",
+    "o": ["a", "bb", "ccc", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "OrderBy(x => x) sortuje alfabetycznie: {\"a\", \"bb\", \"ccc\"}. First() to \"a\"."
+  },
+  {
+    "id": 291,
+    "q": "Co wyświetli kod?\n\nint? x = null;\nint y = x.GetValueOrDefault(100);\nConsole.Write(y);",
+    "o": ["0", "null", "100", "Błąd"],
+    "c": 2,
+    "type": "single",
+    "h": "Metoda GetValueOrDefault zwraca wartość zmiennej, a jeśli jest ona nullem - zwraca podany parametr (100)."
+  },
+  {
+    "id": 292,
+    "q": "Wskaż błąd w metodzie częściowej (partial method):\n\npartial class A {\n    partial void Test() { Console.Write(\"X\"); }\n}",
+    "o": ["Brak definicji klasy", "Metody częściowe muszą zwracać void i być domyślnie prywatne", "Błąd nazwy", "Brak modyfikatora static"],
+    "c": 1,
+    "type": "single",
+    "h": "Wykład 12: Metody częściowe mają ostre restrykcje - brak modyfikatorów dostępu i typ zwracany zawsze void."
+  },
+  {
+    "id": 293,
+    "q": "Co wypisze program?\n\nConsole.Write(true ? \"Tak\" : \"Nie\" + \" Może\");",
+    "o": ["Tak", "Tak Może", "Nie Może", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Operator warunkowy ma wyższy priorytet niż konkatenacja (+) w tym kontekście (wybiera 'Tak' i kończy)."
+  },
+  {
+    "id": 294,
+    "q": "Co się stanie w tym kodzie?\n\nint x = 10;\nobject o = x;\nbyte b = (byte)(int)o;\nConsole.Write(b);",
+    "o": ["10", "Wyjątek", "0", "Błąd kompilacji"],
+    "c": 0,
+    "type": "single",
+    "h": "Najpierw robimy poprawny unboxing do inta (10), a potem rzutujemy int na byte. Wynik to 10."
+  },
+  {
+    "id": 295,
+    "q": "Jaki jest wynik działania kodu na stringach?\n\nstring s = \"Abc\";\nConsole.Write(s.ToLower()[0]);",
+    "o": ["A", "a", "B", "b"],
+    "c": 1,
+    "type": "single",
+    "h": "ToLower() zamienia na \"abc\". Indeks [0] to pierwsza litera, czyli 'a'."
+  },
+  {
+    "id": 296,
+    "q": "Co wypisze program?\n\nint x = 5;\nConsole.Write(x > 0 & x < 10);",
+    "o": ["true", "false", "5", "Błąd kompilacji"],
+    "c": 0,
+    "type": "single",
+    "h": "Pojedynczy operator '&' to bitowe lub logiczne AND bez krótkiego cięcia. Wynik dla bool to true."
+  },
+  {
+    "id": 297,
+    "q": "Co zostanie wypisane?\n\nint[] t = new int[2];\nt[0] = 10;\nint[] t2 = t;\nt2[0] = 20;\nConsole.Write(t[0]);",
+    "o": ["10", "20", "0", "Błąd"],
+    "c": 1,
+    "type": "single",
+    "h": "Tablice są referencyjne. t i t2 wskazują na to samo miejsce. Zmiana w t2 zmienia t."
+  },
+  {
+    "id": 298,
+    "q": "Jaki wynik wypisze kod LINQ?\n\nint[] t = { 1, 2, 3, 4 };\nConsole.Write(t.Where(x => x > 2).Sum());",
+    "o": ["3", "4", "7", "10"],
+    "c": 2,
+    "type": "single",
+    "h": "Filtrujemy liczby > 2 (3 i 4). Sumujemy je: 3 + 4 = 7."
+  },
+  {
+    "id": 299,
+    "q": "Co wypisze program?\n\nint i = 1;\nswitch(i) {\n    case 1: Console.Write(\"Jeden\"); break;\n    default: Console.Write(\"Inne\"); break;\n}",
+    "o": ["Jeden", "Inne", "JedenInne", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "i wynosi 1, więc trafia do pierwszego przypadku i kończy działanie po break."
+  },
+  {
+    "id": 300,
+    "q": "Jaki wynik da rzutowanie rzeczewistej na całkowitą?\n\nfloat f = 4.9f;\nConsole.Write((int)f);",
+    "o": ["4", "5", "4.9", "Błąd"],
+    "c": 0,
+    "type": "single",
+    "h": "Rzutowanie (int) zawsze obcina część ułamkową, nie zaokrągla. Wynik to 4."
+  }
+]

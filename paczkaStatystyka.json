@@ -1,0 +1,15 @@
+[
+  {
+    "id": 501,
+    "q": "Który z poniższych wzorów poprawnie definiuje współczynnik korelacji liniowej Pearsona ($r$)?",
+    "o": [
+      "$$r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2 \\sum (y_i - \\bar{y})^2}}$$",
+      "$$r = \\frac{\\sigma^2}{\\mu}$$",
+      "$$r = \\sum x_i y_i$$",
+      "$$r = \\frac{cov(X,Y)}{\\bar{x} \\cdot \\bar{y}}$$"
+    ],
+    "c": 0,
+    "type": "single",
+    "h": "Współczynnik Pearsona to iloraz kowariancji i iloczynu odchyleń standardowych obu zmiennych."
+  }
+]

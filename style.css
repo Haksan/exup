@@ -1,0 +1,191 @@
+:root {
+    --bg: #0b0f1a;
+    --card: #161b2c;
+    --primary: #38bdf8;
+    --primary-glow: rgba(56, 189, 248, 0.3);
+    --success: #10b981;
+    --danger: #ef4444;
+    --text-main: #f1f5f9;
+    --text-dim: #94a3b8;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.hidden { display: none !important; }
+
+/* Header & Progress */
+header {
+    background: rgba(11, 15, 26, 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    max-width: 1000px; margin: auto; padding: 12px 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.nav-btn {
+    background: var(--card); border: 1px solid var(--border);
+    color: white; padding: 8px 16px; border-radius: 8px;
+    cursor: pointer; display: flex; align-items: center; gap: 8px;
+}
+
+.stat-pill {
+    background: #1e293b; padding: 6px 16px; border-radius: 20px;
+    display: inline-flex; gap: 10px; font-size: 13px; margin-left: 10px;
+}
+
+.stat-pill .label { color: var(--text-dim); text-transform: uppercase; font-size: 10px; font-weight: 800; margin-top: 2px; }
+
+.progress-track { width: 100%; height: 3px; background: #1e293b; }
+#progress-bar { width: 0%; height: 100%; background: var(--primary); box-shadow: 0 0 10px var(--primary); transition: 0.4s; }
+
+/* Hero Card / Drop Zone */
+#drop-zone { min-height: 90vh; display: flex; align-items: center; justify-content: center; }
+
+.hero-card {
+    background: var(--card); padding: 50px; border-radius: 32px;
+    text-align: center; max-width: 500px; width: 90%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border);
+}
+
+.hero-card h1 span { color: var(--primary); }
+
+.badge {
+    background: var(--primary-glow); color: var(--primary);
+    display: inline-block; padding: 4px 12px; border-radius: 12px;
+    font-size: 11px; font-weight: 800; margin-bottom: 15px;
+}
+
+#drop-area {
+    margin-top: 30px; padding: 40px; border: 2px dashed #334155;
+    border-radius: 24px; transition: 0.3s;
+}
+
+#drop-area.highlight { border-color: var(--primary); background: var(--primary-glow); }
+
+.btn-primary {
+    background: var(--primary); color: #000; border: none;
+    padding: 14px 28px; border-radius: 12px; font-weight: 800;
+    cursor: pointer; transition: 0.2s; margin-top: 15px;
+}
+
+.btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary-glow); }
+
+/* Input Styling */
+input[type="number"] {
+    background: #0f172a; border: 1px solid var(--border);
+    color: white; padding: 10px; border-radius: 8px; width: 80px; text-align: center;
+}
+
+/* Quiz Cards */
+#questions-root { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+
+.q-card {
+    background: var(--card); padding: 35px; border-radius: 24px;
+    margin-bottom: 30px; border: 1px solid var(--border);
+    animation: slideIn 0.5s ease;
+}
+
+/* Styl dla samego pytania (tekst nad kodem) */
+.q-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+/* Kontener na kod - stylizowany na edytor */
+.q-code-wrapper {
+    background: #011627; /* Bardzo ciemny granat (styl Night Owl) */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    overflow-x: auto; /* Przewijanie jeśli kod jest za długi */
+    position: relative;
+}
+
+/* Styl samej czcionki w kodzie */
+.q-code-wrapper code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #addb67; /* Zielonkawy kolor dla kodu */
+    white-space: pre; /* Zachowuje wcięcia i entery */
+    display: block;
+}
+
+/* Dekoracyjny element "terminala" (opcjonalnie) */
+.q-code-wrapper::before {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.option {
+    display: block; width: 100%; padding: 18px 25px;
+    margin: 12px 0; border: 1px solid var(--border);
+    border-radius: 16px; background: rgba(255,255,255,0.03);
+    color: var(--text-main); text-align: left; font-size: 16px;
+    cursor: pointer; transition: 0.2s;
+}
+
+.option:hover:not(:disabled) { border-color: var(--primary); background: rgba(255,255,255,0.07); }
+
+.correct { background: #064e3b !important; border-color: var(--success) !important; color: #10b981; font-weight: bold; }
+.wrong { background: #451a1a !important; border-color: var(--danger) !important; color: #ef4444; }
+.selected { border-color: var(--primary) !important; background: var(--primary-glow) !important; }
+
+.btn-check {
+    width: 100%; padding: 15px; background: var(--success);
+    color: white; border: none; border-radius: 12px;
+    font-weight: bold; cursor: pointer; margin-top: 20px;
+}
+
+.hint-box {
+    margin-top: 25px; padding: 15px; background: #1e1b16;
+    border-left: 4px solid #eab308; border-radius: 8px;
+    color: #fde047; font-size: 14px; display: none;
+}
+
+@keyframes slideIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.q-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.q-id-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-dim); /* Ciemniejszy, subtelny kolor */
+    opacity: 0.5;
+    background: rgba(255,255,255,0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.q-index-info {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

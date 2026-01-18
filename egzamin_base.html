@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Exam Station PRO (JSON)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<header id="quiz-header" class="hidden">
+    <div class="header-inner">
+        <div class="header-left">
+            <button class="nav-btn" onclick="location.reload()">
+                <span class="icon">🏠</span> <span class="txt">Menu</span>
+            </button>
+        </div>
+        <div class="header-center">
+            <div class="stat-pill">
+                <span class="label">Postęp</span>
+                <span class="val"><span id="current-q">0</span> / <span id="total-q">0</span></span>
+            </div>
+            <div class="stat-pill">
+                <span class="label">Punkty</span>
+                <span class="val" id="score">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="progress-track"><div id="progress-bar"></div></div>
+</header>
+
+<main id="app-viewport">
+    <section id="drop-zone" class="active">
+        <div class="hero-card">
+            <h1>Exam <span>Partner</span></h1>
+            <p>Wczytaj plik <code>.json</code>, aby rozpocząć losowanie pytań.</p>
+            
+            <div class="config-row">
+                <div class="input-group">
+                    <label>Liczba pytań do wylosowania:</label>
+                    <input type="number" id="draw-count" value="30" min="1" max="500">
+                </div>
+            </div>
+
+            <div id="drop-area">
+                <div class="drop-icon">📄</div>
+                <div class="drop-text">Upuść plik .json tutaj</div>
+                <div class="drop-sub">Obsługuje ID pytań i losowanie</div>
+                <input type="file" id="file-input" hidden accept=".json">
+                <button class="btn-primary" onclick="document.getElementById('file-input').click()">WYBIERZ PLIK JSON</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz-screen" class="hidden">
+        <div id="questions-root"></div>
+    </section>
+</main>
+
+<script src="engine.js"></script>
+</body>
+</html>
