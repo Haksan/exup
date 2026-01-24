@@ -13,14 +13,15 @@ function handleFiles(files) {
     const reader = new FileReader();
     reader.onload = (e) => {
         try {
-            // KLUCZOWA ZMIANA: Odczytujemy plik jako czysty tekst JSON
             const content = e.target.result;
-            const allQuestions = JSON.parse(content);
-            
+            let allQuestions = JSON.parse(content);
             const count = parseInt(document.getElementById('draw-count').value) || 30;
             
-            // Losowanie i przycinanie do wybranej liczby pytań
-            quizData = allQuestions.sort(() => 0.5 - Math.random()).slice(0, count);
+            // 1. Losowanie zestawu pytań z puli
+            let selectedQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, count);
+            
+            // 2. Mieszanie kolejności odpowiedzi wewnątrz każdego pytania
+            quizData = selectedQuestions.map(q => shuffleOptions(q));
             
             if (quizData.length > 0) startQuiz();
         } catch (err) { 
@@ -31,6 +32,34 @@ function handleFiles(files) {
     reader.readAsText(files[0]);
 }
 
+// Funkcja tasująca odpowiedzi i aktualizująca indeksy poprawnych odpowiedzi
+function shuffleOptions(question) {
+    // Tworzymy tablicę obiektów {tekst, czyPoprawna}
+    let optionsWithStatus = question.o.map((text, index) => {
+        const isCorrect = Array.isArray(question.c) 
+            ? question.c.includes(index) 
+            : question.c === index;
+        return { text, isCorrect };
+    });
+
+    // Tasujemy opcje
+    optionsWithStatus.sort(() => Math.random() - 0.5);
+
+    // Wyciągamy przetasowane teksty
+    question.o = optionsWithStatus.map(opt => opt.text);
+
+    // Aktualizujemy indeksy poprawnych odpowiedzi w polu 'c'
+    if (question.type === "multiple") {
+        question.c = optionsWithStatus
+            .map((opt, index) => opt.isCorrect ? index : null)
+            .filter(index => index !== null);
+    } else {
+        question.c = optionsWithStatus.findIndex(opt => opt.isCorrect);
+    }
+
+    return question;
+}
+
 function startQuiz() {
     document.getElementById('drop-zone').classList.add('hidden');
     document.getElementById('quiz-header').classList.remove('hidden');
@@ -39,14 +68,15 @@ function startQuiz() {
     
     renderQuestions(); 
     
-
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false}
-        ],
-        throwOnError : false
-    });
+    if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false}
+            ],
+            throwOnError : false
+        });
+    }
 
     window.scrollTo(0,0);
 }
@@ -56,7 +86,7 @@ function renderQuestions() {
     root.innerHTML = "";
     
     quizData.forEach((q, idx) => {
-        // Rozdzielamy tekst na tytuł i kod
+        const isMulti = q.type === "multiple";
         const firstNewLineIndex = q.q.indexOf('\n');
         let titleText = q.q;
         let codeContent = "";
@@ -71,7 +101,7 @@ function renderQuestions() {
         card.innerHTML = `
             <div class="q-header-row">
                 <span class="q-id-badge">ID: ${q.id || 'N/A'}</span>
-                <span class="q-index-info">Zadanie ${idx + 1}</span>
+                <span class="q-index-info">Zadanie ${idx + 1} ${isMulti ? '(Wielokrotny wybór)' : ''}</span>
             </div>
             
             <div class="q-title">${titleText}</div>
@@ -83,6 +113,9 @@ function renderQuestions() {
                     <button class="option" onclick="handleSelect(${idx}, ${oi}, this)">${opt}</button>
                 `).join('')}
             </div>
+
+            ${isMulti ? `<button class="btn-check" id="check-${idx}" onclick="checkMulti(${idx})">Zatwierdź odpowiedź</button>` : ''}
+            
             <div class="hint-box" id="hint-${idx}">💡 ${q.h}</div>
         `;
         root.appendChild(card);
@@ -103,7 +136,8 @@ window.handleSelect = (qIdx, oIdx, btn) => {
             score++;
         } else {
             btn.classList.add('wrong');
-            container.querySelectorAll('.option')[q.c].classList.add('correct');
+            const options = container.querySelectorAll('.option');
+            if (options[q.c]) options[q.c].classList.add('correct');
         }
         finalize(qIdx);
     }
@@ -112,23 +146,29 @@ window.handleSelect = (qIdx, oIdx, btn) => {
 window.checkMulti = (qIdx) => {
     const q = quizData[qIdx];
     const container = document.getElementById(`opts-${qIdx}`);
+    const checkBtn = document.getElementById(`check-${qIdx}`);
+    
     if (container.classList.contains('locked')) return;
 
-    const selected = Array.from(container.querySelectorAll('.option.selected')).map(b => 
-        Array.from(container.querySelectorAll('.option')).indexOf(b)
-    ).sort();
-    
-    const correct = Array.isArray(q.c) ? [...q.c].sort() : [q.c];
-    const isCorrect = JSON.stringify(selected) === JSON.stringify(correct);
+    const buttons = Array.from(container.querySelectorAll('.option'));
+    const selectedIndices = buttons
+        .map((btn, index) => btn.classList.contains('selected') ? index : null)
+        .filter(index => index !== null)
+        .sort();
 
-    container.querySelectorAll('.option').forEach((btn, i) => {
-        if (correct.includes(i)) btn.classList.add('correct');
-        else if (selected.includes(i)) btn.classList.add('wrong');
+    const correctIndices = (Array.isArray(q.c) ? [...q.c] : [q.c]).sort();
+    const isCorrect = JSON.stringify(selectedIndices) === JSON.stringify(correctIndices);
+
+    buttons.forEach((btn, i) => {
+        const isSelected = btn.classList.contains('selected');
+        const isRight = correctIndices.includes(i);
+        if (isRight) btn.classList.add('correct');
+        else if (isSelected) btn.classList.add('wrong');
     });
 
     if (isCorrect) score++;
     container.classList.add('locked');
-    document.getElementById(`check-${qIdx}`).style.display = 'none';
+    if (checkBtn) checkBtn.style.display = 'none';
     finalize(qIdx);
 };
 
@@ -137,5 +177,6 @@ function finalize(qIdx) {
     document.getElementById('score').innerText = score;
     document.getElementById('current-q').innerText = answered;
     document.getElementById('progress-bar').style.width = (answered / quizData.length * 100) + "%";
-    document.getElementById(`hint-${qIdx}`).style.display = 'block';
+    const hint = document.getElementById(`hint-${qIdx}`);
+    if (hint) hint.style.display = 'block';
 }

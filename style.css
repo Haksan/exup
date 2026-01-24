@@ -189,3 +189,6 @@ input[type="number"] {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+.option.selected { border: 2px solid #38bdf8; background: rgba(56, 189, 248, 0.1); }
+.option.correct { background: #064e3b !important; border-color: #10b981 !important; color: white; }
+.option.wrong { background: #451a1a !important; border-color: #ef4444 !important; color: white; }
